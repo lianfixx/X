@@ -1,0 +1,14 @@
+{
+  "handle": "emilianomilla_",
+  "espacio_vox": "personal",
+  "estado": "cuenta nueva",
+  "premium": false,
+  "objetivos": ["marca personal", "influencia política", "comunidad de IA + Derecho"],
+  "balance": {"ia-derecho": 0.3334, "lifestyle": 0.3333, "politica": 0.3333},
+  "tolerancia_balance": 0.15,
+  "max_originales_dia": 2,
+  "separacion_min_h": 4,
+  "video_min_s": 10,
+  "modo": "programar con aprobación de Emi, post por post",
+  "actualizado": "2026-11-10"
+}
