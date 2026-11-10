@@ -27,6 +27,7 @@ Del video de Santi Muñoz [«Esto es lo que Claude encontró en el algoritmo de 
 | [`cuenta/`](cuenta/README.md) | Estado de la cuenta: perfil, voz, aprendizajes, mutuals, publicados. |
 | [`puente/`](puente/README.md) | Lo que x-viral deja para Vox Studio. |
 | [`ia/`](ia/REGLAS.md) | Reglas, protocolo entre IA y control. |
+| [`docs/`](docs/AUDITORIA-2026-11-10.md) | Auditoría y [encargo para Muse](docs/PROMPT-MUSE.md). |
 | [`CHANGELOG.md`](CHANGELOG.md) | Registro de cada cambio. |
 
 ## Uso rápido

@@ -3,10 +3,12 @@
   "espacio_vox": "personal",
   "estado": "cuenta casi sin uso",
   "creada": "2026-04",
+  "creada_nota": "X muestra «Joined April 2026». Emi recuerda cerca de un año; vale lo que muestre X al revisarlo con sesión iniciada",
   "protegida": true,
   "observado": {"fecha": "2026-11-10", "seguidores": 2, "siguiendo": 42, "posts": 24, "fuente": "perfil público visto desde box, sin sesión"},
   "vox_ref": "claude/magical-cori-8bdu3a",
   "premium": false,
+  "premium_nota": "Emi piensa contratarlo (10/11/2026); cambiar a true cuando esté activo",
   "objetivos": ["marca personal", "influencia política", "comunidad de IA + Derecho"],
   "balance": {"ia-derecho": 0.3334, "lifestyle": 0.3333, "politica": 0.3333},
   "tolerancia_balance": 0.15,
@@ -14,5 +16,6 @@
   "separacion_min_h": 4,
   "video_min_s": 10,
   "modo": "programar con aprobación de Emi, post por post",
+  "inicio_de_publicacion": "2026-11-16",
   "actualizado": "2026-11-10"
 }

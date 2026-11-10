@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-10 · Candidatas de conversación, encargo para Muse y fecha de arranque
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 10/11/2026, en chat de Claude Code: sugerir cuentas candidatas, dar un encargo para que Muse haga lo que falta, empezar a publicar el lunes siguiente; dijo que piensa contratar Premium y que recuerda que su cuenta tiene cerca de un año.
+- Cambios: `cuenta/mutuals.md` con 24 cuentas candidatas en tres pilares, cada una abierta en X ese día para comprobar que existe (se descartaron siete que ya no existen o cambiaron de dueño); `docs/PROMPT-MUSE.md` con el encargo para Muse (rama por defecto, sesión de X en box, conector de GitHub para la tarea semanal, instalar la skill en claude.ai y traer datos); `cuenta/perfil.json` con el arranque el 16/11/2026, la intención de Premium y la nota sobre la fecha de creación (X muestra abril de 2026).
+- Archivos: `cuenta/mutuals.md`, `cuenta/perfil.json`, `docs/PROMPT-MUSE.md`, `README.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado; perfiles de las 24 candidatas → abiertos uno por uno desde box; encargo para Muse → no ejecutado (lo corre Emi).
+- Pendiente: los de la entrada anterior; correr el encargo de Muse; con sesión de X en box, leer los 24 posts existentes y revisarlos con Emi antes de quitar la protección.
+
 ## 2026-11-10 · x-viral 1.0.2: estado real de la cuenta, ejemplo de semana y rama main
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 10/11/2026, en chat de Claude Code: hacer lo mejor con la rama principal (con su permiso expreso), mantener público el repositorio, explicar lo pendiente, y continuar, auditar, mejorar y finalizar.
