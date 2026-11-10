@@ -3,7 +3,7 @@ name: x-viral
 description: "Planear, redactar, revisar, programar con aprobación y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
 license: Uso personal de Emiliano García Milla. Sin licencia de reutilización para terceros.
 metadata:
-  version: "1.0.1"
+  version: "1.0.2"
   release_date: "2026-11-10"
   language: "es-MX"
   algoritmo_commit: "660cd74"
@@ -25,13 +25,17 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 6. **Nada de anzuelos, grupos de likes ni automatización.**
 7. **Cada skill en su carril**: x-viral no produce video ni edita Vox Studio.
 
+## Estado de la cuenta
+
+Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil.json`). Hasta que Emi quite la protección, los posts no se recomiendan a nadie: ver la fase 0 de [playbook.md](references/playbook.md). Se puede redactar y planear desde ya.
+
 ## Qué leer según el encargo
 
 | Encargo | Leer |
 |---|---|
 | Cualquiera | Esta página, `cuenta/perfil.json`, `cuenta/voz.md`, `cuenta/aprendizajes.md` |
 | Escribir o revisar un post, una cita (quote) o un artículo | [redaccion.md](references/redaccion.md), [pilares.md](references/pilares.md) |
-| Semana o calendario | Lo anterior y [playbook.md](references/playbook.md) |
+| Semana o calendario | Lo anterior, [playbook.md](references/playbook.md) y el [ejemplo de semana](assets/semana.ejemplo.json) |
 | Qué premia o castiga X, dudas sobre visibilidad | [algoritmo.md](references/algoritmo.md) |
 | Programar | [programacion.md](references/programacion.md) |
 | Video de Vox Studio o ideas para video | [conexion-vox.md](references/conexion-vox.md) |

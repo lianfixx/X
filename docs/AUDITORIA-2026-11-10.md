@@ -57,10 +57,9 @@ Detalle de cada corrección en la entrada 1.0.1 de `CHANGELOG.md`.
 
 ## 5. Lo que no se pudo probar
 
-- **La cuenta real.** Es nueva: no hay posts, métricas ni correcciones de Emi. La voz en X queda como candidata.
+- **La cuenta real.** Está protegida, con 2 seguidores y 24 posts que no se pudieron leer (visto el 10/11/2026 desde box, sin sesión). No hay métricas ni correcciones de Emi. La voz en X queda como candidata.
 - **Programar en X.** Procedimiento documentado, no ejecutado.
 - **El efecto real de cada regla.** Se leyó código; no se midió ninguna cuenta.
-- **Versiones de Python anteriores a 3.13**: el código evita funciones nuevas, pero solo se corrió en 3.13.
 - **La tarea semanal**: creada, primera ejecución el 16/11/2026.
 - **Lo que X no publica**: instrucciones de Grox, algunos umbrales y reglas.
 - **Lectura de Vox Studio desde `main`.** Vox Studio aún vive en su rama de trabajo `claude/magical-cori-8bdu3a`; el puente se probó con copia local y por red contra esa rama (`--ref`). Con la rama `main` responde «no disponible» hasta que allá se fusione.

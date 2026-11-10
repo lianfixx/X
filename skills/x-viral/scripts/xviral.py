@@ -439,8 +439,9 @@ def perfil() -> dict:
     numero("separacion_min_h", 0, 24)
     numero("video_min_s", 1, 600)
     numero("tolerancia_balance", 0, 1)
-    if "premium" in cfg and not isinstance(cfg["premium"], bool):
-        raise Falla(f"{ruta}: «premium» debe ser true o false, sin comillas")
+    for clave in ("premium", "protegida"):
+        if clave in cfg and not isinstance(cfg[clave], bool):
+            raise Falla(f"{ruta}: «{clave}» debe ser true o false, sin comillas")
     bal = cfg.get("balance")
     if bal is not None:
         if (not isinstance(bal, dict) or set(bal) != set(PILARES)
@@ -653,6 +654,9 @@ def revisar(b, pesos: dict, historial: list[dict], cfg: dict, para: str = "") ->
                      "enseñárselo de nuevo y correr «xviral.py aprobar»")
         if b.get("reescrito") is not True:
             e.append("reescrito: debe ser true (sin comillas); nada sale con el texto crudo de una IA")
+    if estado == "programado" and cfg.get("protegida") is True:
+        w.append("la cuenta figura como protegida en cuenta/perfil.json: un post de cuenta protegida solo lo ven "
+                 "sus seguidores aprobados y no se recomienda a nadie más")
     if estado in ("programado", "publicado"):
         if not fecha_ok(b.get("fecha")):
             e.append("fecha: falta o no es una fecha válida AAAA-MM-DD")

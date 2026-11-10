@@ -2,13 +2,18 @@
 
 Adaptación del plan del video de Santi a una cuenta nueva, con tres pilares y con lo que el código dice hoy ([algoritmo.md](algoritmo.md)). Cada paso dice en qué se apoya. Lo marcado como **criterio** es recomendación de la skill, no una regla del código.
 
+## Punto de partida (visto el 10/11/2026)
+
+`@emilianomilla_` existe desde abril de 2026: 24 posts, 42 seguidos, 2 seguidores y **posts protegidos** (candado). Mientras siga protegida, nada de este plan funciona: solo ven los posts los seguidores aprobados, no se pueden citar ni repostear y el sistema no los recomienda a nadie más.
+
 ## Fase 0 · Preparar la cuenta (una vez)
 
+0. **Quitar la protección**, cuando Emi lo decida: Configuración → Privacidad y seguridad → Audiencia, multimedia y etiquetas → desmarcar «Proteger tus posts». Antes, **revisar los 24 posts que ya existen**: al abrir la cuenta quedan públicos. Emi borra los que no quiera asociar a la cuenta o que choquen con sus límites ([pilares.md](pilares.md)). Después, poner `"protegida": false` en `cuenta/perfil.json`.
 1. **Perfil completo**: foto propia, nombre, bio que diga los tres temas y de dónde habla Emi. El clic al perfil pesa 0; la bio sirve para que quien llega decida seguir, que pesa 4. **Criterio.**
-2. **Habitar los temas**: seguir y leer cuentas de IA y Derecho, de entrenamiento y de análisis político mexicano que Emi respete. Anotar de 5 a 10 por pilar en `cuenta/mutuals.md`. El historial de la propia cuenta y de quienes interactúan orienta a quién se recomienda.
+2. **Habitar los temas**: seguir y leer cuentas **de otras personas** que Emi respete en IA y Derecho, en entrenamiento y en análisis político mexicano, y anotar de 5 a 10 por pilar en `cuenta/mutuals.md`. No son cuentas suyas ni cuentas desde las que se publique: son con quienes conversa. Sirven por dos razones del código: el historial de la propia cuenta y de quienes interactúan orienta a quién se recomienda, y cuando dos cuentas se siguen mutuamente pesa cuatro veces más que una responda a los posts de la otra. Con 2 seguidores, casi nadie ve hoy un post en su Inicio; estas conversaciones son la forma legítima de cambiarlo.
 3. **Sin atajos**: nada de comprar seguidores, grupos de intercambio de likes, seguir y dejar de seguir, ni herramientas que interactúen solas. El código modela esas secuencias y una etiqueta de cuenta saca todos los posts de las recomendaciones a quienes no siguen a Emi.
 4. **Decidir Premium**: sin Premium, 280 caracteres y sin artículos. El ranking no premia la suscripción. Si Emi la contrata, poner `"premium": true` en `cuenta/perfil.json`.
-5. **Under the Hood no está disponible** hasta que la cuenta cumpla un año con 10 posts al mes. Anotar la fecha de creación de la cuenta en el campo `creada` de `cuenta/perfil.json` para saber cuándo revisarlo.
+5. **Under the Hood no está disponible** hasta que la cuenta cumpla un año (abril de 2027, según `creada` en `cuenta/perfil.json`) y tenga 10 posts o más en el mes anterior.
 
 ## Fase 1 · Primeras semanas
 

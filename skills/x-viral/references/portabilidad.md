@@ -12,7 +12,7 @@ La skill es Markdown plano, JSON y un script de Python sin dependencias. No usa 
 
 ## Con terminal y sin terminal
 
-Con terminal: `python3 skills/x-viral/scripts/xviral.py …` desde la raíz del repositorio clonado (Python 3.9 o posterior; probado con 3.13). El script necesita el repositorio completo: lee y escribe en `cuenta/` y `puente/`.
+Con terminal: `python3 skills/x-viral/scripts/xviral.py …` desde la raíz del repositorio clonado (Python 3.9 o posterior; probado con 3.9, 3.11, 3.12 y 3.13). El script necesita el repositorio completo: lee y escribe en `cuenta/` y `puente/`.
 
 Sin terminal, la IA aplica a mano lo mismo que el script, en este orden:
 

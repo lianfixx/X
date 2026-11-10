@@ -1,0 +1,57 @@
+{
+  "semana": "2026-W47",
+  "nota": "Ejemplo de formato. Los textos son inventados para mostrar la estructura: no son vivencias ni opiniones de Emi y no se publican.",
+  "posts": [
+    {
+      "id": "ej-1", "pilar": "ia-derecho", "formato": "texto", "fecha": "2026-11-16", "hora": "08:30",
+      "texto": "Le pedí a tres IA que me resumieran el mismo contrato de renta. Dos se saltaron la cláusula de penalización. Lo que aprendí: pídeles primero la lista de obligaciones de cada parte y después el resumen.",
+      "senales": {"copiar_link": 2, "dm": 1, "reply": 2, "quote": 0, "follow": 1, "share": 1, "repost": 0, "like": 2},
+      "por_que": {"copiar_link": "le sirve a quien está por firmar un contrato", "reply": "invita a contar qué IA usa cada quien"},
+      "riesgos": {"report": 0, "mute": 0, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    },
+    {
+      "id": "ej-2", "pilar": "lifestyle", "formato": "foto", "media": "foto propia del rack a las 6 am", "fecha": "2026-11-16", "hora": "19:30",
+      "texto": "Pierna a las 6 am, audiencia a las 9. No es disciplina heroica: es que a las 8 de la noche ya no me queda cabeza para nada. ¿Tú entrenas antes o después del trabajo?",
+      "senales": {"copiar_link": 0, "dm": 0, "reply": 2, "quote": 0, "follow": 1, "share": 0, "repost": 0, "like": 2},
+      "por_que": {"reply": "la pregunta es fácil de contestar con experiencia propia"},
+      "riesgos": {"report": 0, "mute": 0, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    },
+    {
+      "id": "ej-3", "pilar": "politica", "formato": "texto", "fecha": "2026-11-17", "hora": "08:30",
+      "opinion_emi": "EJEMPLO: aquí va la postura que Emi dictó con sus palabras antes de redactar.",
+      "texto": "Antes de opinar sobre la iniciativa leí el dictamen completo. El objetivo me parece bien. Lo que no acepto es el transitorio que deja la regla sin plazo. Una regla sin fecha no obliga a nadie.",
+      "senales": {"copiar_link": 1, "dm": 0, "reply": 2, "quote": 2, "follow": 1, "share": 1, "repost": 1, "like": 2},
+      "por_que": {"reply": "quien defiende la iniciativa tiene un punto concreto que rebatir", "quote": "es una tesis corta que se puede citar para discutirla"},
+      "riesgos": {"report": 0, "mute": 1, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    },
+    {
+      "id": "ej-4", "pilar": "lifestyle", "formato": "video", "media": "clip propio de la última serie", "duracion_s": 18, "piezas_media": 1, "fecha": "2026-11-18", "hora": "07:45",
+      "texto": "Seis meses fallando esta marca. Hoy salió, y lo único que cambié fue dormir una hora más.",
+      "senales": {"copiar_link": 0, "dm": 1, "reply": 2, "quote": 0, "follow": 2, "share": 0, "repost": 0, "like": 3},
+      "por_que": {"reply": "da pie a que otros cuenten qué les destrabó a ellos", "follow": "muestra constancia real, no consejos"},
+      "riesgos": {"report": 0, "mute": 0, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    },
+    {
+      "id": "ej-5", "pilar": "ia-derecho", "formato": "texto", "fecha": "2026-11-19", "hora": "08:30",
+      "cita_legal": true, "fuentes": ["https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf"],
+      "texto": "Si le pegas a una IA datos personales de otra persona, la pregunta deja de ser técnica: el artículo 16 constitucional protege esos datos. Antes de pegar, quita nombres.",
+      "senales": {"copiar_link": 2, "dm": 1, "reply": 1, "quote": 1, "follow": 1, "share": 1, "repost": 0, "like": 2},
+      "por_que": {"copiar_link": "es una regla práctica que se manda al equipo de trabajo"},
+      "riesgos": {"report": 0, "mute": 0, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    },
+    {
+      "id": "ej-6", "pilar": "politica", "formato": "texto", "fecha": "2026-11-20", "hora": "19:30",
+      "opinion_emi": "EJEMPLO: aquí va la postura que Emi dictó con sus palabras antes de redactar.",
+      "texto": "Criticar una decisión pública no es atacar a quien la tomó. Lo que pido es simple: que publiquen el fundamento. Sin fundamento no hay nada que discutir, solo que obedecer.",
+      "senales": {"copiar_link": 1, "dm": 0, "reply": 2, "quote": 1, "follow": 1, "share": 1, "repost": 1, "like": 2},
+      "por_que": {"reply": "abre la discusión sobre qué decisiones deberían venir fundadas"},
+      "riesgos": {"report": 0, "mute": 1, "no_me_interesa": 1, "bloqueo": 0},
+      "estado": "borrador"
+    }
+  ]
+}

@@ -291,6 +291,24 @@ class Borrador(unittest.TestCase):
         ok["aprobado_huella"] = x.huella(ok["texto"])
         self.assertEqual(rev(ok, para="programado")[0], [])
 
+    def test_cuenta_protegida_avisa_al_programar(self):
+        ok = base(aprobado_por_emi="2026-11-10, chat", reescrito=True, fecha=MANANA, hora="08:30")
+        ok["aprobado_huella"] = x.huella(ok["texto"])
+        e, w, _ = rev(ok, cfg={"protegida": True}, para="programado")
+        self.assertEqual(e, [])
+        self.assertTrue(any("protegida" in m for m in w))
+        self.assertEqual(rev(ok, cfg={"protegida": False}, para="programado")[1], [])
+        self.assertEqual(rev(base(), cfg={"protegida": True})[1], [])
+
+    def test_ejemplo_de_semana_es_valido(self):
+        dato = json.loads((x.SKILL / "assets" / "semana.ejemplo.json").read_text(encoding="utf-8"))
+        vistos = []
+        for b in dato["posts"]:
+            e, w, _ = rev(b, vistos)
+            self.assertEqual((e, w), ([], []), b["id"])
+            vistos.append(b)
+        self.assertEqual(x.revisar_semana(dato["posts"], {}, [], dato["semana"]), ([], []))
+
     def test_aprobacion_no_acepta_valores_falsos(self):
         ok = base(aprobado_por_emi="2026-11-10, chat", reescrito=True, fecha=MANANA, hora="08:30")
         ok["aprobado_huella"] = x.huella(ok["texto"])
@@ -429,7 +447,7 @@ class Estado(unittest.TestCase):
             self.assertEqual(self.correr("revisar", borrador)[0], 2, mal)
             self.assertEqual(self.correr("balance")[0], 2, mal)
         (x.CUENTA / "publicados.jsonl").unlink()
-        for mal in ('[]', '{"premium": "false"}', '{"video_min_s": "10"}', '{"max_originales_dia": "2"}',
+        for mal in ('[]', '{"premium": "false"}', '{"protegida": "true"}', '{"video_min_s": "10"}', '{"max_originales_dia": "2"}',
                     '{"balance": [1]}', '{"balance": {"ia-derecho": "x", "lifestyle": 0.5, "politica": 0.5}}',
                     '{"balance": {"ia-derecho": 0.9, "lifestyle": 0.5, "politica": 0.5}}', '{mal'):
             self.archivo("cuenta/perfil.json", mal)

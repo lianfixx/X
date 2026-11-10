@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-10 · x-viral 1.0.2: estado real de la cuenta, ejemplo de semana y rama main
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 10/11/2026, en chat de Claude Code: hacer lo mejor con la rama principal (con su permiso expreso), mantener público el repositorio, explicar lo pendiente, y continuar, auditar, mejorar y finalizar.
+- Cambios: (1) Se vio el perfil público de `@emilianomilla_` desde box: creada en abril de 2026, 24 posts, 42 seguidos, 2 seguidores y posts protegidos. Queda en `cuenta/perfil.json`, en la skill y como paso 0 del plan (quitar la protección y revisar antes los 24 posts existentes); `revisar --para programado` avisa mientras `protegida` sea `true`. (2) Ejemplo de semana completo y válido en `skills/x-viral/assets/semana.ejemplo.json`, cubierto por una prueba. (3) El plan explica qué son las cuentas de `cuenta/mutuals.md` (de otras personas, para conversar) y por qué. (4) El control valida también que `cuenta/perfil.json` se pueda leer. (5) Pruebas corridas en Python 3.9, 3.11, 3.12 y 3.13. (6) Rama `main` creada con este contenido.
+- Archivos: `cuenta/{perfil.json,README.md}`, `skills/x-viral/{SKILL.md,assets/semana.ejemplo.json}`, `skills/x-viral/scripts/{xviral.py,test_xviral.py}`, `skills/x-viral/references/{playbook.md,redaccion.md,portabilidad.md}`, `ia/verificar.py`, `docs/AUDITORIA-2026-11-10.md`, `README.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado (48 pruebas de `xviral.py`, 3 de `verificar.py`); las mismas pruebas con Python 3.9, 3.11 y 3.12 → aprobado; `xviral.py semana skills/x-viral/assets/semana.ejemplo.json` → aprobado sin avisos; workflow «Control de la skill» en GitHub sobre 1.0.1 → aprobado; lectura de los 24 posts existentes → bloqueada (cuenta protegida y box sin sesión de X); programación en X y tarea semanal → no ejecutadas.
+- Pendiente: (a) Emi: revisar sus 24 posts, quitar la protección cuando decida y poner `"protegida": false`; elegir las primeras cuentas de `cuenta/mutuals.md`; decidir Premium; dar material y postura para la primera semana. (b) Poner `main` como rama por defecto en GitHub (Settings → General → Default branch): hasta entonces la vigilancia semanal de GitHub corre desde la rama `claude/zealous-brown-7imdnq`. (c) Iniciar sesión de X en box para poder programar. (d) Aplicar `puente/PETICION-vox.md` en Vox Studio. (e) Decidir si se instalan aquí los frenos automáticos de otros repositorios.
+
 ## 2026-11-10 · x-viral 1.0.1: correcciones de la revisión independiente
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 10/11/2026: «al final audita de fondo, arregla absolutamente todos los errores».

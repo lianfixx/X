@@ -83,6 +83,7 @@ def ci() -> int:
     correr("pruebas de verificar", [sys.executable, "-m", "unittest", "discover", "-s", "ia", "-p", "test_*.py"])
     correr("SKILL.md y puentes", [sys.executable, "ia/check_skill.py", *SKILLS])
     correr("pesos legibles", [sys.executable, "skills/x-viral/scripts/xviral.py", "pesos", "ver"])
+    correr("perfil de la cuenta legible", [sys.executable, "skills/x-viral/scripts/xviral.py", "balance"])
 
     canon = (RAIZ / SKILLS[0] / "SKILL.md").read_text(encoding="utf-8")
     desc = re.search(r'^description: (.+)$', canon, re.M)

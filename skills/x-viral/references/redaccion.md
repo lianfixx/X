@@ -78,7 +78,7 @@ No reciclar: el código etiqueta los grupos de texto duplicado, y un post casi i
 - `aprobado_por_emi`, `aprobado_huella` y `reescrito` no se escriben a mano: los anota `xviral.py aprobar` cuando Emi ya dio el visto bueno a ese texto. La huella ata la aprobación al texto exacto.
 - `excepcion_limite`: motivo, solo cuando el texto menciona un asunto público con fuente o un cliente claramente hipotético.
 
-Una semana es un archivo así (también vale una lista de borradores):
+Una semana es un archivo así (también vale una lista de borradores). Hay un ejemplo completo que pasa la validación en [semana.ejemplo.json](../assets/semana.ejemplo.json); sus textos son inventados para mostrar el formato y no se publican.
 
 ```json
 {"semana": "2026-W47", "posts": [ { "id": "2026-11-17-a", "…": "…" }, { "id": "2026-11-17-b", "…": "…" } ]}

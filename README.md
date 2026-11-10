@@ -41,7 +41,7 @@ python3 skills/x-viral/scripts/xviral.py vox leer                               
 python3 ia/verificar.py ci                  # control completo antes de un commit
 ```
 
-Python 3.9 o posterior, sin dependencias (probado con 3.13). Sin terminal: [portabilidad.md](skills/x-viral/references/portabilidad.md).
+Python 3.9 o posterior, sin dependencias (probado con 3.9, 3.11, 3.12 y 3.13). Sin terminal: [portabilidad.md](skills/x-viral/references/portabilidad.md).
 
 ## Cómo se mantiene al día
 
@@ -51,7 +51,7 @@ Python 3.9 o posterior, sin dependencias (probado con 3.13). Sin terminal: [port
 
 ## Estado
 
-Versión 1.0.1 (10/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta es nueva, así que no hay posts, métricas ni correcciones de voz de Emi; la programación en X no se ha ejecutado contra la cuenta real; la tarea semanal aún no corre por primera vez.
+Versión 1.0.2 (10/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta está protegida y casi sin uso, así que no hay métricas ni correcciones de voz de Emi; la programación en X no se ha ejecutado contra la cuenta real; la tarea semanal aún no corre por primera vez.
 
 El repositorio es público. Contiene las reglas de trabajo de Emi (qué no se publica y por qué), no borradores ni datos de terceros.
 
