@@ -2,6 +2,8 @@
   "handle": "emilianomilla_",
   "espacio_vox": "personal",
   "estado": "cuenta nueva",
+  "creada": "",
+  "vox_ref": "claude/magical-cori-8bdu3a",
   "premium": false,
   "objetivos": ["marca personal", "influencia política", "comunidad de IA + Derecho"],
   "balance": {"ia-derecho": 0.3334, "lifestyle": 0.3333, "politica": 0.3333},

@@ -20,6 +20,7 @@ Del video de Santi Muñoz [«Esto es lo que Claude encontró en el algoritmo de 
 | [`references/programacion.md`](skills/x-viral/references/programacion.md) | Programar en X con aprobación. |
 | [`references/conexion-vox.md`](skills/x-viral/references/conexion-vox.md) | Puente con Vox Studio (videos). |
 | [`references/prompts.md`](skills/x-viral/references/prompts.md) | Encargos listos para copiar. |
+| [`references/video-santi.md`](skills/x-viral/references/video-santi.md) | Qué hizo y dijo Santi en el video, y qué se sostiene. |
 | [`references/portabilidad.md`](skills/x-viral/references/portabilidad.md) | Cómo cargarla en cada IA. |
 | [`scripts/xviral.py`](skills/x-viral/scripts/xviral.py) | Pesos del algoritmo, revisión de borradores y semanas, balance, registro. |
 | [`data/pesos.json`](skills/x-viral/data/pesos.json) | Pesos vigentes extraídos del código, con commit y fecha. |
@@ -31,25 +32,27 @@ Del video de Santi Muñoz [«Esto es lo que Claude encontró en el algoritmo de 
 ## Uso rápido
 
 ```bash
-X="python3 skills/x-viral/scripts/xviral.py"
-$X pesos ver                                  # pesos vigentes
-$X balance                                    # qué pilar toca
-$X revisar cuenta/privado/borrador.json       # revisar un post
-$X semana cuenta/privado/2026-W47.json        # revisar una semana
-$X vox leer --espacio personal                # tono y lecciones de Vox Studio
-python3 ia/verificar.py ci                    # control completo antes de un commit
+python3 skills/x-viral/scripts/xviral.py pesos ver                               # pesos vigentes
+python3 skills/x-viral/scripts/xviral.py balance                                 # qué pilar toca
+python3 skills/x-viral/scripts/xviral.py revisar cuenta/privado/borrador.json    # revisar un post
+python3 skills/x-viral/scripts/xviral.py semana cuenta/privado/2026-W47.json     # revisar una semana
+python3 skills/x-viral/scripts/xviral.py aprobar cuenta/privado/2026-W47.json ID --medio "chat"   # anotar el visto bueno de Emi
+python3 skills/x-viral/scripts/xviral.py vox leer                                # tono y lecciones de Vox Studio
+python3 ia/verificar.py ci                  # control completo antes de un commit
 ```
 
-Python 3.9 o posterior, sin dependencias. Sin terminal: [portabilidad.md](skills/x-viral/references/portabilidad.md).
+Python 3.9 o posterior, sin dependencias (probado con 3.13). Sin terminal: [portabilidad.md](skills/x-viral/references/portabilidad.md).
 
 ## Cómo se mantiene al día
 
-- Cada lunes, GitHub compara el código de X con los pesos guardados ([`algoritmo.yml`](.github/workflows/algoritmo.yml)) y marca en rojo si algo cambió.
-- Una tarea programada semanal de Claude hace la misma comparación, actualiza la skill y propone el cambio en un pull request.
+- Cada lunes, GitHub compara el código de X con lo guardado ([`algoritmo.yml`](.github/workflows/algoritmo.yml)) y marca en rojo si cambió algún parámetro, interruptor, archivo citado o sección de novedades. No vigila el resto del repositorio de X. GitHub pausa los workflows programados tras 60 días sin actividad en el repositorio.
+- Emi tiene además una tarea programada semanal en Claude (creada el 10/11/2026, lunes 12:47 del centro de México; vive en su cuenta de Claude, no en este repositorio) que hace la misma comparación y, si hay cambios, actualiza la skill y propone un pull request. Su primera ejecución es el 16/11/2026; hasta entonces no está probada.
 - Cada push pasa el control de [`control.yml`](.github/workflows/control.yml).
 
 ## Estado
 
-Versión 1.0.0 (10/11/2026). Probado: script y control. **No probado todavía**: la cuenta es nueva, así que no hay posts, métricas ni correcciones de voz de Emi, y la programación en X no se ha ejecutado contra la cuenta real.
+Versión 1.0.1 (10/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta es nueva, así que no hay posts, métricas ni correcciones de voz de Emi; la programación en X no se ha ejecutado contra la cuenta real; la tarea semanal aún no corre por primera vez.
+
+El repositorio es público. Contiene las reglas de trabajo de Emi (qué no se publica y por qué), no borradores ni datos de terceros.
 
 Uso personal de Emiliano García Milla. El video y el reporte de Santi Muñoz y el código de X son de sus autores; aquí se citan y se enlazan, no se redistribuyen.

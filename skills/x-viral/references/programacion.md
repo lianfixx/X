@@ -10,9 +10,8 @@ La IA solo toca el botón de programar. No da like, no sigue, no responde, no ci
 
 `xviral.py revisar BORRADOR --para programado` sin errores. Eso exige:
 
-- `aprobado_por_emi`: fecha y medio del visto bueno a **ese texto exacto** (por ejemplo «2026-11-16, chat de Claude»). Si el texto cambia después, la aprobación caduca.
-- `reescrito: true`.
-- `fecha` y `hora` (hora del centro de México).
+- El visto bueno de Emi a **ese texto exacto y a su foto o video**, anotado con `xviral.py aprobar ARCHIVO ID --medio "…"` solo después de que lo dio. La orden guarda la fecha, el medio y una huella del texto; si el texto cambia, `revisar` lo rechaza hasta que Emi lo vuelva a aprobar. Anotar una aprobación que Emi no dio es la falta más grave que puede cometer una IA en este repositorio.
+- `fecha` (no pasada) y `hora`, en hora del centro de México.
 - En política, `opinion_emi`; con cita legal, `fuentes`.
 
 Una aprobación general («programa lo de la semana») no basta: se le enseña cada texto.
@@ -25,12 +24,16 @@ Con box (la computadora en la nube de Emi) u otro navegador con su sesión:
 
 1. Abrir `https://x.com/compose/post`. Si pide iniciar sesión, verificación en dos pasos o un captcha, darle a Emi el enlace para que lo haga él; la IA no escribe ni guarda contraseñas ni códigos.
 2. Comprobar que la cuenta activa es `@emilianomilla_`.
-3. Pegar el texto aprobado tal cual. Adjuntar la media indicada, una sola pieza si es video.
-4. Icono de calendario → fecha y hora del borrador → confirmar → **Programar**.
-5. Abrir la lista de programados y verificar texto, media, fecha y hora. Tomar captura.
+3. Pegar el texto aprobado tal cual. Adjuntar el archivo aprobado (foto o video); si es video, uno solo.
+4. Icono de calendario. **Leer la zona horaria que muestra el cuadro**: X usa la del navegador o de la cuenta, y box es una máquina en la nube que puede no estar en hora de México. Convertir la hora del borrador a esa zona, elegir fecha y hora, confirmar → **Programar**.
+5. Abrir la lista de programados y verificar texto, archivo adjunto, fecha y hora (ya convertida). Tomar captura.
 6. Cambiar `estado` a `programado` en el borrador y avisar a Emi con la captura.
 
 Sin navegador con sesión: entregar a Emi el texto listo para copiar, con fecha y hora, y decirlo así. No decir «programado» si no se verificó en la lista de programados.
+
+## Si un post programado tiene que cambiar
+
+La IA no edita ni borra un post programado por su cuenta. Se le avisa a Emi; él lo edita o lo borra desde la lista de programados, o lo pide de forma expresa para ese post. Si cambia el texto, es un borrador nuevo: se revisa, Emi lo aprueba y se vuelve a programar.
 
 ## Después de publicar
 

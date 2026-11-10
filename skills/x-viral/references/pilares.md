@@ -32,7 +32,7 @@ Procurar un post puente por cada tres o cuatro. Cuenta para el pilar que domine 
 2. **Primero el hecho y su fuente**, después la opinión. La crítica va a decisiones, argumentos y resultados.
 3. **Independiente**: critica a quien corresponda, sin bandera. Emi participa en Acción Política Juvenil; la cuenta personal no habla a nombre del PAN ni de Acción Juvenil, no usa sus logotipos y no publica su material como propio. Si un post trata de ellos, se dice la relación.
 4. **Sin ataques personales**: ni insultos, ni apodos, ni burlas al físico o a la vida privada.
-5. **Riesgo**: es el pilar que más mutes, bloqueos y reportes puede provocar, que son los pesos negativos más grandes del código. Un borrador con riesgo de reporte o de mute en 2 o más se reescribe. Releerlo con ojos de quien piensa distinto: ¿le daría motivos para reportar o solo para discutir? Discutir es lo que se busca.
+5. **Riesgo**: es el pilar que más puede provocar que lo silencien, lo bloqueen o lo reporten, que son los pesos negativos más grandes del código. Un borrador con riesgo de reporte o de silencio (`mute`) en 2 o más se reescribe. Releerlo con ojos de quien piensa distinto: ¿le daría motivos para reportar o solo para discutir? Discutir es lo que se busca.
 6. **Periodos electorales**: revisar las reglas vigentes (veda, propaganda) antes de publicar sobre candidatos o partidos, y preguntarle a Emi.
 
 ## Límites permanentes
@@ -44,7 +44,7 @@ Procurar un post puente por cada tres o cuatro. Cuenta para el pilar que domine 
 - Un post informa u opina; no es asesoría para un caso concreto ni promete resultados.
 - Nada de datos personales de terceros.
 
-El validador detecta lo detectable (la palabra «Castorena», «mi cliente», números de expediente, insultos comunes). Lo demás es criterio de quien redacta y de Emi al aprobar.
+El validador es una red, no el juez. Detecta el nombre del despacho vetado, menciones a clientes («un cliente», «mi clienta», «mis clientes»), números de expediente o de juicio y los insultos más comunes, y avisa de palabras dudosas. Se le escapan las paráfrasis («alguien que me contrató»), los apodos y el sarcasmo. Un asunto público con fuente o un ejemplo claramente hipotético se declaran en `excepcion_limite` con su motivo. Lo demás es criterio de quien redacta y de Emi al aprobar.
 
 ## Los espacios de Vox Studio
 

@@ -4,11 +4,11 @@ Qué se revisó, cómo y qué se corrigió antes de publicar la versión 1.0.0.
 
 ## 1. El reporte de Santi contra el código de hoy
 
-Método: clon de `xai-org/x-algorithm` en el commit `660cd74` (10/11/2026). Tres agentes de solo lectura verificaron por separado 40 afirmaciones del reporte (puntaje, ciclo de vida, visibilidad), cada una con archivo y línea. Las de mayor consecuencia se comprobaron después a mano en el código.
+Método: clon de `xai-org/x-algorithm` en el commit `660cd74` (10/11/2026). Tres agentes de solo lectura verificaron por separado 40 afirmaciones del reporte (puntaje, ciclo de vida, visibilidad), cada una con archivo y línea. Las de mayor consecuencia las comprobó después, directamente en el código, el agente principal.
 
 | # | Afirmación del reporte | Resultado | Corrección aplicada en la skill |
 |---|---|---|---|
-| 1 | «Copiar link vale 40 likes», «un reporte pesa como perder 468 likes» | Incorrecta según el propio código (`param.rs:385-409`) | Regla 5 de la skill; sin equivalencias en ningún archivo. |
+| 1 | «Copiar link vale 40 likes», «un reporte pesa como perder 468 likes» | Incorrecta según el propio código (`home-mixer/params/param.rs:382-410`) | Regla 5 de la skill; sin equivalencias en ningún archivo. |
 | 2 | Primer like compartiendo el post «donde vive tu gente» | Contradicha: solo cuentan acciones sobre posts servidos en Inicio | Paso 10 del plan. |
 | 3 | Like 0.5, share 2.0, «no me interesa» −43.2 | Cambiaron o difieren entre home-mixer y vm-ranker | `data/pesos.json` guarda ambos archivos. |
 | 4 | Empujón para cuentas de ≤1,000 seguidores con <1,000 vistas, top 85 % | Cambió: ≤50,000 seguidores, <200 vistas en Inicio, <2 horas, top 97 % | Plan, paso 9; algoritmo.md. |
@@ -19,7 +19,7 @@ Método: clon de `xai-org/x-algorithm` en el commit `660cd74` (10/11/2026). Tres
 | 9 | `llm_slop_user` etiqueta la cuenta 30 días | Cambió: 7 días | algoritmo.md, plan, redaccion.md. |
 | 10 | El anzuelo es la única categoría sin exención | Son tres | algoritmo.md. |
 | 11 | Escudo: reputación ≥ 54 **o** >25,000 seguidores | Los seguidores solo cuentan si no hay puntaje | algoritmo.md. |
-| 12 | «Todo falla abierto» | Mixto | algoritmo.md. |
+| 12 | Si el sistema falla, siempre se resuelve a favor del autor | Mixto: a veces el post se descarta | algoritmo.md. |
 | 13 | El idioma no cuenta | No hay filtro, pero sí es dato del modelo | algoritmo.md. |
 | 14 | Nunca acortadores de terceros | Sin sustento: se juzga el destino | El validador avisa, no bloquea. |
 | 15 | 17 filtros; 47 elementos por respuesta; filtro de visibilidad después de cortar a 35 | 21 filtros; 48; el filtro corre sobre los 50 | algoritmo.md. |
@@ -38,16 +38,29 @@ Transcripción obtenida de los subtítulos automáticos de YouTube desde box (Yo
 
 | Control | Resultado |
 |---|---|
-| `python3 -m unittest discover -s skills/x-viral/scripts -p 'test_*.py'` | Aprobado, 35 pruebas. |
+| `python3 -m unittest discover -s skills/x-viral/scripts -p 'test_*.py'` | Aprobado, 46 pruebas. |
 | `python3 -m unittest discover -s ia -p 'test_*.py'` | Aprobado, 3 pruebas. |
 | `python3 ia/check_skill.py skills/x-viral .claude/skills/x-viral .agents/skills/x-viral` | Aprobado. |
 | `xviral.py pesos extraer` y `pesos comparar` contra el clon real | Aprobado, sin diferencias. |
-| Revisión independiente de la skill por otro agente | Ver `CHANGELOG.md`. |
+| Revisión independiente de la skill por otro agente | Hecha; ver sección 4. |
 
-## 4. Lo que no se pudo probar
+## 4. Revisión independiente de la skill
+
+Un agente sin contexto previo recibió el repositorio (no las conclusiones) con el encargo de encontrar defectos. Corrió el script con entradas límite en una copia, cotejó 37 afirmaciones contra el código de X y revisó enlaces, órdenes, privacidad y redacción.
+
+- Hechos: 29 confirmados y 8 imprecisos (líneas citadas, alcance del escudo de cuenta grande, mecánica exacta del empujón de arranque, qué significa `llm_slop`, residuo del filtro de Brasil, ventanas de video). Todos corregidos.
+- Código: 8 defectos altos y 14 medios. El más serio: la compuerta de aprobación aceptaba valores falsos. Todos corregidos y cubiertos con pruebas (de 35 a 46).
+- Documentación: sin enlaces rotos; órdenes que no existían solo en el protocolo común (ahora explicado en `ia/REGLAS.md`).
+- Privacidad: sin secretos ni datos de contacto. Queda a decisión de Emi que el repositorio sea público (ver `CHANGELOG.md`).
+
+Detalle de cada corrección en la entrada 1.0.1 de `CHANGELOG.md`.
+
+## 5. Lo que no se pudo probar
 
 - **La cuenta real.** Es nueva: no hay posts, métricas ni correcciones de Emi. La voz en X queda como candidata.
 - **Programar en X.** Procedimiento documentado, no ejecutado.
 - **El efecto real de cada regla.** Se leyó código; no se midió ninguna cuenta.
+- **Versiones de Python anteriores a 3.13**: el código evita funciones nuevas, pero solo se corrió en 3.13.
+- **La tarea semanal**: creada, primera ejecución el 16/11/2026.
 - **Lo que X no publica**: instrucciones de Grox, algunos umbrales y reglas.
 - **Lectura de Vox Studio desde `main`.** Vox Studio aún vive en su rama de trabajo `claude/magical-cori-8bdu3a`; el puente se probó con copia local y por red contra esa rama (`--ref`). Con la rama `main` responde «no disponible» hasta que allá se fusione.

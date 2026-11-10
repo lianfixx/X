@@ -33,12 +33,16 @@ análisis (lo que el repositorio no publica).
 ## 2. Revisión semanal del algoritmo
 
 ```text
-Usa la skill x-viral del repositorio lianfixx/X. Clona xai-org/x-algorithm y corre
-«python3 skills/x-viral/scripts/xviral.py pesos comparar --repo RUTA».
-Si no hay cambios, registra la revisión y termina. Si los hay: lee el diff y las
+Usa la skill x-viral del repositorio lianfixx/X. Clona xai-org/x-algorithm en una
+carpeta temporal y corre
+«python3 skills/x-viral/scripts/xviral.py pesos comparar --repo RUTA --sellar».
+Si no hay cambios y el commit de X es el mismo, termina sin tocar nada. Si no hay
+cambios pero X publicó un commit nuevo, sube el sello de verificación (data/pesos.json)
+con su entrada en CHANGELOG.md. Si hay cambios: lee el diff y las
 secciones nuevas de Notable Updates, actualiza references/algoritmo.md y lo que
 dependa de ello, corre «pesos extraer» y las pruebas, registra en CHANGELOG.md y
-abre un pull request que explique en lenguaje llano qué cambió y qué cambia para Emi.
+abre un pull request que explique en lenguaje llano qué cambió y qué cambia para Emi
+(esta tarea tiene su autorización permanente para abrirlo; no lo fusiones).
 ```
 
 ## 3. Semana de contenido
@@ -50,7 +54,8 @@ Pregúntame qué pasó esta semana (entrenos, casos de IA que usé, noticias que
 importan y mi postura sobre cada una). Con eso propón la semana: una o dos
 publicaciones por día, separadas al menos cuatro horas, un tercio por pilar.
 Valida con «xviral.py semana» hasta que no haya errores y enséñame cada texto
-para corregirlo con mis palabras. No programes nada sin mi visto bueno, post por post.
+para corregirlo con mis palabras. No programes nada sin mi visto bueno, post por post,
+y anótalo con «xviral.py aprobar» solo cuando te lo dé.
 ```
 
 ## 4. Un post a partir de una idea

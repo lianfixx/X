@@ -11,8 +11,9 @@ class Secretos(unittest.TestCase):
         return any(re.search(p, texto) for p in v.SECRETOS)
 
     def test_detecta(self):
-        for texto in ("-----BEGIN RSA PRIVATE KEY-----", "sk-" + "a" * 30, "ghp_" + "A1" * 18,
-                      "auth_token=" + "ab12" * 6, "GAME900101HDFRRL09"):
+        # Las muestras se arman al vuelo para que este archivo no dispare el propio escaneo.
+        for texto in ("-----BEGIN RSA " + "PRIVATE KEY-----", "sk" + "-" + "a" * 30, "gh" + "p_" + "A1" * 18,
+                      "auth" + "_token=" + "ab12" * 6, "GAME" + "900101" + "HDFRRL09"):
             self.assertTrue(self.detecta(texto), texto)
 
     def test_no_marca_texto_normal(self):
@@ -23,7 +24,7 @@ class Secretos(unittest.TestCase):
     def test_edad_de_pesos(self):
         texto, dias = v.edad_pesos()
         self.assertIsInstance(dias, int)
-        self.assertIn("extraídos el", texto)
+        self.assertIn("verificados el", texto)
 
 
 if __name__ == "__main__":

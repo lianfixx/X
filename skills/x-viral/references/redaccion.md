@@ -29,10 +29,10 @@ Lo que el texto debe cumplir:
 
 - El valor completo va en el post raíz. Un hilo compite contra sí mismo: en cada feed sobrevive un solo post por conversación.
 - Post original siempre. Para comentar algo ajeno con alcance, cita (quote); el repost y la respuesta sirven para conversar, no para crecer.
-- Enlaces directos a la fuente. Abrir un enlace suma; lo que cuenta es la reputación del dominio de destino. Un acortador no se castiga en el código, pero esconde al lector a dónde va.
+- Enlaces directos a la fuente. Abrir un enlace suma; lo que cuenta es la reputación del dominio de destino. Un acortador no se castiga en el código, pero le oculta al lector adónde lleva.
 - Video: una sola pieza y más de 10 segundos. Foto: propia.
 - Los hashtags no suman ni restan en el código; se usan solo si aportan al lector.
-- 280 caracteres mientras la cuenta no tenga Premium (cada enlace cuenta 23).
+- 280 caracteres mientras la cuenta no tenga Premium (cada enlace cuenta 23 y cada emoji 2; el validador lo aproxima, X tiene la última palabra).
 
 ## Pedir la acción sin anzuelo
 
@@ -44,7 +44,7 @@ Sí vale decir para quién es el post y dejar que el lector decida: «Si conoces
 
 El código tiene un modelo con nombre propio para el texto de IA publicado en serie (`llm_slop_user`): etiqueta la cuenta 7 días y saca todos sus posts de las recomendaciones a no seguidores (ver [algoritmo.md](algoritmo.md)). La regla de la skill: **la IA propone, Emi reescribe**. Ningún borrador pasa a aprobado sin `reescrito: true`.
 
-Señales que el validador avisa y que conviene quitar: frases de relleno («en el mundo actual», «es importante destacar», «en resumen»), la fórmula «no es X, es Y», rayas largas, listas con emoji, tres adjetivos seguidos, cierres con moraleja. Mejor: una frase que solo Emi diría, un detalle concreto, un número con su fuente.
+Señales de las que avisa el validador: frases de relleno («en el mundo actual», «es importante destacar», «en resumen»), la fórmula «no es X, es Y», la raya larga, las listas con viñetas de emoji y más de dos hashtags. No detecta, y conviene quitar igual: tres adjetivos seguidos y los cierres con moraleja. Mejor: una frase que solo Emi diría, un detalle concreto, un número con su fuente.
 
 No reciclar: el código etiqueta los grupos de texto duplicado, y un post casi igual a otro tampoco le da nada nuevo a quien ya sigue a Emi. Para repetir una idea que funcionó, se escribe de nuevo con otro ángulo.
 
@@ -75,11 +75,20 @@ No reciclar: el código etiqueta los grupos de texto duplicado, y un post casi i
 - `senales` y `riesgos`: de 0 (nulo) a 3 (alto), estimados con honestidad por quien redacta. Toda señal cara (copiar enlace, mensaje, respuesta, cita, seguir) en 2 o más lleva su frase en `por_que`.
 - Video: además `duracion_s` y `piezas_media: 1`.
 - `estado`: `borrador` → `aprobado` → `programado` → `publicado`.
+- `aprobado_por_emi`, `aprobado_huella` y `reescrito` no se escriben a mano: los anota `xviral.py aprobar` cuando Emi ya dio el visto bueno a ese texto. La huella ata la aprobación al texto exacto.
+- `excepcion_limite`: motivo, solo cuando el texto menciona un asunto público con fuente o un cliente claramente hipotético.
+
+Una semana es un archivo así (también vale una lista de borradores):
+
+```json
+{"semana": "2026-W47", "posts": [ { "id": "2026-11-17-a", "…": "…" }, { "id": "2026-11-17-b", "…": "…" } ]}
+```
 
 ```bash
 python3 skills/x-viral/scripts/xviral.py revisar cuenta/privado/borrador.json
-python3 skills/x-viral/scripts/xviral.py revisar cuenta/privado/borrador.json --para programado
 python3 skills/x-viral/scripts/xviral.py semana cuenta/privado/2026-W47.json
+python3 skills/x-viral/scripts/xviral.py aprobar cuenta/privado/2026-W47.json 2026-11-17-a --medio "chat de Claude"
+python3 skills/x-viral/scripts/xviral.py revisar cuenta/privado/2026-W47.json --para programado
 ```
 
 ## Qué significa el índice de señales
@@ -88,4 +97,4 @@ python3 skills/x-viral/scripts/xviral.py semana cuenta/privado/2026-W47.json
 
 ## Semana
 
-Una o dos publicaciones originales por día, separadas al menos cuatro horas, sin repetir pilar el mismo día y con un tercio por pilar en la semana. `semana` valida todo eso y además cada borrador. La hora se elige según cuándo está activa la audiencia de Emi; no hay una hora mágica en el código.
+Una o dos publicaciones originales por día (contando lo ya publicado), separadas al menos cuatro horas aunque crucen la medianoche, y con un tercio por pilar: desde tres posts, ningún pilar puede alejarse más de un post (o del 15 %) de lo que le toca. `semana` da error si algo de eso falla, revisa cada borrador y avisa, sin bloquear, cuando los posts de un día son del mismo pilar o una fecha cae fuera de la semana. La hora se elige según cuándo está activa la audiencia de Emi; no hay una hora mágica en el código.

@@ -34,9 +34,10 @@ def git(*args: str) -> str:
 def edad_pesos() -> tuple[str, int | None]:
     try:
         d = json.loads((RAIZ / "skills/x-viral/data/pesos.json").read_text(encoding="utf-8"))
-        dias = (dt.date.today() - dt.date.fromisoformat(d["extraido"])).days
-        return f"commit {d['commit'][:10]} de X, extraídos el {d['extraido']} (hace {dias} días)", dias
-    except (OSError, ValueError, KeyError) as exc:
+        fecha = d.get("verificado") or d["extraido"]
+        dias = (dt.date.today() - dt.date.fromisoformat(fecha)).days
+        return f"commit {d['commit'][:10]} de X, verificados el {fecha} (hace {dias} días)", dias
+    except (OSError, ValueError, KeyError, TypeError, AttributeError) as exc:
         return f"no se pudieron leer ({exc})", None
 
 
@@ -50,7 +51,8 @@ def inicio() -> int:
     texto, dias = edad_pesos()
     print(f"Pesos del algoritmo: {texto}")
     if dias is None or dias > MAX_DIAS_PESOS:
-        print("  AVISO: revisar el algoritmo antes de dar números (SKILL.md, «Mantener al día»).")
+        print("  AVISO: hace más de dos semanas que no se sella una verificación. Puede que X no haya cambiado; "
+              "correr «pesos comparar --sellar» antes de dar números (SKILL.md, «Mantener al día»).")
     registro = RAIZ / "CHANGELOG.md"
     if registro.is_file():
         titulos = [l for l in registro.read_text(encoding="utf-8").splitlines() if l.startswith("## ")][:3]
@@ -61,7 +63,10 @@ def inicio() -> int:
 
 def rastreados() -> list[Path]:
     salida = git("ls-files", "-z", "--cached", "--others", "--exclude-standard")
-    return [RAIZ / p for p in salida.split("\0") if p]
+    if salida:
+        return [RAIZ / p for p in salida.split("\0") if p]
+    # Sin git (por ejemplo, una copia descargada en .zip): revisar todo lo que hay.
+    return [p for p in RAIZ.rglob("*") if p.is_file() and ".git" not in p.parts and "__pycache__" not in p.parts]
 
 
 def ci() -> int:
@@ -90,7 +95,7 @@ def ci() -> int:
         commit = json.loads((RAIZ / "skills/x-viral/data/pesos.json").read_text(encoding="utf-8"))["commit"]
         if not meta or not commit.startswith(meta.group(1)):
             fallas.append("SKILL.md: algoritmo_commit no coincide con data/pesos.json")
-    except (OSError, ValueError, KeyError):
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
         fallas.append("data/pesos.json ilegible")
 
     registro = RAIZ / "CHANGELOG.md"
@@ -106,7 +111,9 @@ def ci() -> int:
         rel = ruta.relative_to(RAIZ).as_posix()
         if rel.startswith("cuenta/privado/") and rel != "cuenta/privado/.gitkeep":
             fallas.append(f"{rel}: los borradores privados no se suben (repositorio público)")
-        if not ruta.is_file() or ruta.stat().st_size > 2_000_000 or rel in ("ia/verificar.py", "ia/test_verificar.py"):
+        if re.search(r"(^|/)(borradores?|drafts?)/|\.cookies$|(^|/)\.env$", rel):
+            fallas.append(f"{rel}: parece un borrador o un archivo de sesión; no va en un repositorio público")
+        if not ruta.is_file() or ruta.stat().st_size > 2_000_000:
             continue
         try:
             contenido = ruta.read_text(encoding="utf-8")

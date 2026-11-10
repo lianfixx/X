@@ -1,16 +1,16 @@
 # Lo que dice el código de X
 
-Fuente: <https://github.com/xai-org/x-algorithm>, commit `660cd74` (10/11/2026; `param.rs` espejado de producción el 09/11/2026). Verificado el 10/11/2026 por tres lecturas independientes del código y comprobaciones directas. Las rutas son del repositorio de X.
+Fuente: <https://github.com/xai-org/x-algorithm>, commit `660cd74` (10/11/2026; `param.rs` sincronizado desde producción el 09/11/2026). Verificado el 10/11/2026 por tres agentes de IA que leyeron el código por separado, más comprobaciones directas del agente principal y una revisión independiente posterior. Las rutas son del repositorio de X; cuando se abrevian, `scoring.rs`, `weights.rs` e `inputs.rs` son los de `xai-value-model/`, `filters/…` son los de `home-mixer/filters/` y `eventProcessing.strato` es `phoenix-rankall-strato/lib/eventProcessing.strato`.
 
 Cuando `xviral.py pesos comparar` avise de cambios, este archivo se actualiza antes de seguir publicando.
 
 ## Cómo leer los números
 
-1. **Los pesos multiplican probabilidades predichas, no conteos.** Para cada lector y cada post, el modelo (Phoenix) predice la probabilidad de cada acción; el puntaje es la suma de peso × probabilidad. X lo aclaró en el código el 14/08/2026 (`home-mixer/params/param.rs:385-409`, `README.md`): decir «un reporte cancela 468 likes» o «copiar el enlace vale 40 likes» es incorrecto. La probabilidad base de un reporte es más de mil veces menor que la de un like; por eso su peso es tan grande.
-2. **Solo cuenta lo que pasa en Inicio.** Una acción entra al sistema si ocurre sobre un post servido en la línea de tiempo de Inicio. Llegar directo al post, por ejemplo coordinándose en un grupo de chat, «no tiene efecto en el ranking» (`param.rs:404-409`).
+1. **Los pesos multiplican probabilidades predichas, no conteos.** Para cada lector y cada post, el modelo (Phoenix) predice la probabilidad de cada acción; el puntaje es la suma de peso × probabilidad. X lo aclaró en el código el 14/08/2026 (`home-mixer/params/param.rs:382-410`, `README.md`): decir «un reporte cancela 468 likes» o «copiar el enlace vale 40 likes» es incorrecto. La probabilidad base de un reporte es más de mil veces menor que la de un like; por eso su peso es tan grande.
+2. **Solo cuenta lo que pasa en Inicio.** Una acción entra al sistema si ocurre sobre un post servido en la línea de tiempo de Inicio. Llegar directo al post, por ejemplo coordinándose en un grupo de chat, «no tiene efecto en el ranking» (`home-mixer/params/param.rs:406-410`).
 3. **Las recomendaciones son personales.** Los reportes o bloqueos de un grupo afectan sobre todo a lectores parecidos a ese grupo, no a todos.
 4. **Son valores por defecto.** `home-mixer/params/param.rs` y `vm-ranker/params.rs` leen los mismos interruptores en producción y sus valores por defecto difieren en ocho pesos. El ranking vivo lo hace `vm-ranker`; home-mixer solo sirve su cálculo si esa llamada falla. Donde difieren, el valor real no está publicado.
-5. **Lo que no está en el repositorio no está probado.** X no publica las instrucciones del clasificador Grox ni algunas reglas, y oculta umbrales con valores falsos declarados (`12.34`, `9.99`).
+5. **Lo que no está en el repositorio no está probado.** X no publica las instrucciones del clasificador Grox ni algunas reglas, y oculta umbrales con valores ficticios, declarados como tales (`12.34`, `9.99`).
 
 ## Pesos de las acciones
 
@@ -49,7 +49,7 @@ Orden en `vm-ranker` (`xai-value-model/scoring.rs:360-406`): suma y desplazamien
 | Ajuste | Valor hoy | Dónde |
 |---|---|---|
 | Puntajes negativos | Todo post con suma negativa queda comprimido por debajo de cualquier post positivo (`NEGATIVE_SCORES_OFFSET = 0.001`). | `weights.rs:4`, `scoring.rs:239-248` |
-| Empujón de arranque | Un post por petición sube a la posición 16. Requisitos: post original, autor con hasta **50,000** seguidores, menos de **2 horas** de publicado, menos de **200** vistas en Inicio y ya dentro del 97 % superior de los candidatos con puntaje. Se elige por muestreo según likes por vista. | `home-mixer/scorers/author_cold_start.rs`, `param.rs:615-688` |
+| Empujón de arranque | A un post por petición se le sube el puntaje al del lugar 16; después se le aplican los ajustes de abajo, así que un post de fuera de red termina más abajo. Requisitos: post original, autor con hasta **50,000** seguidores, menos de **2 horas** de publicado, menos de **200** vistas en Inicio y ya dentro del 97 % superior de los candidatos con puntaje. Entre los que cumplen se elige por sorteo ponderado por likes por vista (un post con cero likes puede salir). No aplica en feeds de tema y depende de grupos de experimento. | `home-mixer/scorers/author_cold_start.rs`, `param.rs:615-688` |
 | Diversidad de autor | El segundo post del mismo autor en un feed vale ×0.625, el tercero ×0.4375, con piso ×0.25 (0.75 × 0.5^k + 0.25). | `vm-ranker/params.rs:175-192`, `scoring.rs:261-263` |
 | Fuera de red | ×0.75 para posts de cuentas que el lector no sigue, **y también** para respuestas y reposts de cuentas que sí sigue. ×0.5 en feeds de tema. | `vm-ranker/params.rs:193-222`, `scoring.rs:284-293` |
 | Selección por diversidad (DPP) | De los 150 mejores elige hasta 50 que no se parezcan entre sí (θ = 0.65). Los elegidos conservan su puntaje; los demás quedan en 0. | `vm-ranker/params.rs:241-259`, `vm-ranker/dpp.rs` |
@@ -92,7 +92,7 @@ Cada vez que alguien abre Para ti (`home-mixer/candidate_pipeline/phoenix_candid
 
 No existe una variable de velocidad ni de «hora dorada». Sí existen estas ventanas.
 
-Video: para entrar a los índices de video, **todas** las piezas del post deben ser video de más de 10 segundos; un clip corto o una imagen añadida lo descalifica (`eventProcessing.strato:403-418`). Esos índices retienen de 48 a 720 horas. Los pesos propios de video están en 0 o casi.
+Video: para entrar a los índices de video, **todas** las piezas del post deben ser video de más de 10 segundos; un clip corto o una imagen añadida lo descalifica (`eventProcessing.strato:403-418`). Esos índices tienen ventanas más largas que las de un post normal (la mayoría de 48 a 720 horas). Los pesos propios de video están en 0 o casi.
 
 Idioma: no hay filtro que exija coincidencia de idioma, pero el idioma del post y del lector sí son datos del modelo. Decir que «el idioma no cuenta» es ir más lejos que el código.
 
@@ -103,13 +103,13 @@ Editar: solo se descartan las versiones viejas; no hay castigo por editar.
 No hay un interruptor secreto: hay reglas con nombre en `visibility-filtering/rules/levels.rs` (el archivo `registry.rs` que cita el reporte de Santi ya no existe).
 
 - Posts de cuentas que el lector sigue: nivel `TimelineHome`, **40 reglas**.
-- Posts recomendados a quien no sigue al autor: esas 40 **más 26** (66 en total). Once de las 26 son etiquetas de cuenta: apagan todos los posts del autor para gente nueva mientras sus seguidores no notan nada. Eso es lo que se suele llamar *shadowban*.
+- Posts recomendados a quien no sigue al autor: esas 40 **más 26** (66 en total). Once de las 26 son etiquetas de cuenta: sacan todos los posts del autor de las recomendaciones a quienes no lo siguen, mientras sus seguidores no notan nada. Eso es lo que se suele llamar *shadowban*.
 
 | Etiqueta | Qué la dispara | Efecto | Duración |
 |---|---|---|---|
-| `SpamHighRecall` (cuenta) | Modelo `llm_slop_user` (texto de IA en serie), cuenta que publica sobre todo spam, fijar un post con enlace malo. | Todos los posts fuera de las recomendaciones a no seguidores. | **7 días** por `llm_slop_user` (el reporte de Santi decía 30). |
+| `SpamHighRecall` (cuenta) | Señal `llm_slop_user`, cuenta que publica sobre todo spam, fijar un post con enlace malo. | Todos los posts fuera de las recomendaciones a no seguidores. | **7 días** por `llm_slop_user` (el reporte de Santi decía 30). |
 | `SpamHighRecall` (post) | Texto sin sentido, respuestas en ráfaga, categorías de spam de Grox, enlace de mala reputación. | Ese post fuera de recomendaciones a no seguidores y de notificaciones. | 30 días en las dos primeras; las demás sin caducidad declarada. |
-| `RiskyHighVizReply` | Modelo `llm_slop_post`; respuesta en hilo ajeno con puntaje de spam ≥ 0.97. | Se usa en notificaciones de menciones y respuestas a no seguidores, no en Para ti. | 30 y 14 días. |
+| `RiskyHighVizReply` | Señal `llm_slop_post`; respuesta en hilo ajeno con puntaje de spam ≥ 0.97. | Se usa en notificaciones de menciones y respuestas a no seguidores, no en Para ti. | 30 y 14 días. |
 | `COPYPASTA_SPAM` | Grupos de texto duplicado. | Ninguna regla publicada la lee. | Sin caducidad. |
 | `SPAM` | Enlace con veredicto «BAD», aplicado también a posts antiguos. | Invisible para todos menos el autor. | — |
 | `MALICIOUS_URL`, `DO_NOT_AMPLIFY` | Reputación del dominio enlazado. | Fuera de recomendaciones a no seguidores. | — |
@@ -119,13 +119,14 @@ No hay un interruptor secreto: hay reglas con nombre en `visibility-filtering/ru
 
 Precisiones que importan:
 
+- **Qué es `llm_slop`**: el código solo muestra el nombre de la señal (literalmente «bazofia de modelo de lenguaje») y su consecuencia. Qué la dispara exactamente no está publicado. Que apunte a texto de IA publicado sin editar es una inferencia a partir del nombre, razonable pero no demostrada.
 - **Anzuelo de interacción**: Grox clasifica `SpamEngagementBaiting`, `SpamEngagementFarming` y `SpamCardManipulation` **sin exención** para cuentas grandes (`grox/flows/ptos/task_write_safety_post_annotations_result_sink.py:234-242`). Son tres categorías, no una.
-- **Escudo de cuenta grande**: puntaje de reputación `user-cred-v2` ≥ 54 (o ≥ 66 para spam de respuestas). Los 25,000 seguidores solo cuentan si no hay puntaje. Una cuenta nueva no lo tiene.
+- **Escudo de cuenta grande**: en las reglas de botmaker y Grox, puntaje de reputación `user-cred-v2` ≥ 54 (o ≥ 66 para spam de respuestas); los 25,000 seguidores solo cuentan si no hay puntaje. En el servicio que aplica `llm_slop_user` los umbrales de exención son ficticios (`12.34`), es decir, desconocidos. Una cuenta nueva no tiene escudo en ningún caso.
 - **Automatización** (`bdsm/`): un modelo mira secuencias de acciones; cuenta ráfagas con menos de un segundo entre acciones e interacciones sobre posts que nunca se mostraron en pantalla. Los umbrales están ocultos.
 - **Acortadores**: no hay castigo específico. El veredicto se calcula sobre el destino final de la cadena de redirecciones (`scarecrow/legacy/UrlVerdictRegistry.scala:67-79`). Lo que cuenta es el dominio de destino.
 - **Agatha** (reportes y bloqueos frente a likes de no seguidores): sus etiquetas duran una semana y, en lo publicado, afectan a búsqueda y notificaciones, no a Para ti. Cada persona que reporta cuenta contra un máximo de 100 cuentas.
-- **Fallas del sistema**: no todo «falla abierto». Si falla la consulta de etiquetas, el post se trata como sin etiqueta; si el post falta en la respuesta del filtro, se descarta.
-- **Política**: no hay reglas para México ni una categoría general de «contenido político». El filtro electoral de Brasil se retiró el 26/10/2026. Grox enumera integridad cívica pero no la clasifica, y su etiqueta automática de insultos solo se aplica a posts en inglés. El riesgo real para opinión política está en los pesos negativos (silenciar, «no me interesa», bloquear, reportar) y en los reportes que acaban en una etiqueta `FOSNR`.
+- **Fallas del sistema**: no siempre se resuelven a favor del autor. Si falla la consulta de etiquetas, el post se trata como sin etiqueta; si el post falta en la respuesta del filtro, se descarta.
+- **Política**: no hay reglas para México ni una categoría general de «contenido político». El filtro electoral de Brasil se retiró de home-mixer el 26/10/2026; queda una regla que solo aplica a lectores en Brasil. Grox enumera integridad cívica pero no la clasifica, y su etiqueta automática de insultos solo se aplica a posts en inglés. El riesgo real para opinión política está en los pesos negativos (silenciar, «no me interesa», bloquear, reportar) y en los reportes que acaban en una etiqueta `FOSNR`.
 
 ## Under the Hood
 

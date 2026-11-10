@@ -2,7 +2,7 @@
 
 Fuente: «Esto es lo que Claude encontró en el algoritmo de X (no es lo que piensas)», Santiago Muñoz (@SantiMunozIA), publicado el 15/08/2026, 19:14 min, <https://youtu.be/lWoj_liZqOI>. Analizado el 10/11/2026 a partir de los subtítulos automáticos y la descripción del video, del reporte que publicó (<https://claude.ai/code/artifact/ee0f8fff-89d9-4248-85bf-e2f98da9ccc7>) y del código de <https://github.com/xai-org/x-algorithm> en su commit `660cd74` (10/11/2026).
 
-Los subtítulos son automáticos: escriben «Cloud» por Claude y cortan frases. Las citas de abajo están limpiadas de muletillas, no inventadas.
+Los subtítulos son automáticos: escriben «Cloud» por Claude y cortan frases. Las citas de abajo se limpiaron de muletillas; no se les añadió nada.
 
 ## Qué hizo, paso a paso
 
@@ -43,14 +43,14 @@ Detalle con archivo y línea en [algoritmo.md](algoritmo.md). Resumen:
 
 | Dijo en el video | Veredicto al 10/11/2026 |
 |---|---|
-| «Un copiar link vale 40 likes»; «todo lo que ganas te lo puede restar» un reporte | **Lectura incorrecta.** X lo aclaró en el propio código el 14/08/2026: los pesos multiplican la probabilidad que el modelo predice para cada lector, no los conteos. Lo que sí se sostiene: el contenido que la gente manda a otra gente es la familia que más pesa. |
+| «Un copiar link vale 40 likes»; un reporte «te puede restar todo lo que ganas» | **Lectura incorrecta.** X lo aclaró en el propio código el 14/08/2026: los pesos multiplican la probabilidad que el modelo predice para cada lector, no los conteos. Lo que sí se sostiene: el contenido que la gente manda a otra gente es la familia que más pesa. |
 | Copiar enlace es la acción con más peso (20) | Confirmado. |
 | «Reply de un mutual» vale 20 | Confirmado el número (5 + 15), descrito al revés: sube el peso de que **el lector responda** a un post original de alguien con quien se sigue mutuamente. |
 | Like 0.5; «no me interesa» −43.2; share 2.0 | Cambiaron o difieren entre los dos archivos de parámetros (like 0.708 / 0.5; «no me interesa» −53.07 / −47.52; share 2.118 / 2.0). |
 | Con menos de 1,000 seguidores X te da un empujón, y «después de los 1,000 muere» | **Cambió.** El empujón de arranque hoy admite autores de hasta 50,000 seguidores, pero solo para posts de menos de 2 horas y menos de 200 vistas en Inicio. El índice para cuentas de menos de 1,000 seguidores existe, pero su fuente está apagada por defecto. |
 | Publicar en ráfaga te canibaliza (segundo post ×0.625) | Confirmado. Santi leyó «vale 0.75 menos»; el factor correcto es ×0.625, ×0.4375 y piso ×0.25. |
 | El post vive 48 horas; lo importante pasa en las primeras 24 | Confirmado: 48 horas como máximo en Para ti y 24 en los índices de un día. Falta en el video la ventana de 2 horas del empujón de arranque. |
-| «El shadow ban existe», 54 reglas | La idea se sostiene, los números no: hoy son 40 reglas para todos y 26 más solo al recomendar a no seguidores (66). El archivo que cita el reporte ya no existe. |
+| «El shadowban existe», 54 reglas | La idea se sostiene, los números no: hoy son 40 reglas para todos y 26 más solo al recomendar a no seguidores (66). El archivo que cita el reporte ya no existe. |
 | El contenido crudo de IA se castiga | Confirmado con matiz: el modelo `llm_slop_user` etiqueta la cuenta **7 días**, no 30. |
 | Las respuestas «nunca se indexan» | Cambió: tienen índices propios cuando reciben likes; siguen fuera de Para ti para no seguidores. |
 | El anzuelo es la única categoría de spam sin exención | Son tres categorías sin exención, no una. |

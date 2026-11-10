@@ -1,8 +1,8 @@
 # Petición para Vox Studio
 
-- De: skill x-viral (`lianfixx/X`), 10/11/2026, por encargo de Emi («conecta y que siempre esté actualizado y alimentado de vox y trabajen en conjunto… pero que cada quien separe sus instrucciones»).
+- De: skill x-viral (`lianfixx/X`), 10/11/2026, por encargo de Emi: que las dos skills se alimenten y trabajen en conjunto, cada una con sus instrucciones separadas.
 - Para: quien mantenga `skills/vox-studio/` en `lianfixx/VIDEOS-IA-SKILL-MILLA`.
-- Estado: pendiente. x-viral no escribe en ese repositorio.
+- Estado: preparada y enviada el 10/11/2026 por mensaje entre sesiones de Claude a la sesión que mantiene Vox Studio; sin respuesta todavía. x-viral no escribe en ese repositorio.
 
 ## Qué se pide
 
