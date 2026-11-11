@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-11 · Skill 1.0.3 instalada en Claude
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026, en chat de Claude Code: reporte de Muse sobre la reinstalación de la skill.
+- Cambios: ninguno en la skill. Se registra que Muse reemplazó en claude.ai la versión 1.0.2 por la 1.0.3 (descargada de `main`), sin eliminar la anterior; queda una sola skill «x-viral», activada, con la descripción vigente. La app la muestra como «v2 · actual», su contador interno de reemplazos.
+- Archivos: este registro.
+- Verificación: según el reporte de Muse que pasó Emi; esta sesión no puede ver los ajustes de claude.ai.
+- Pendiente: cierra el punto (b) de la entrada 1.0.3. Siguen (a) y (c).
+
 ## 2026-11-11 · x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 11/11/2026, en chat de Claude Code: reporte del encargo de Muse. Hechas: rama por defecto `main`, conector de GitHub en la tarea semanal, skill x-viral 1.0.2 instalada en Claude (y vox-studio 0.12.0). Bloqueadas: iniciar sesión en X y leer datos del perfil, porque X rechazó el inicio de sesión en box y en la máquina virtual el 10 y el 11/11 («Sorry, you are not allowed to log in at this time»). Instrucción de Emi: no intentar iniciar sesión en X.
