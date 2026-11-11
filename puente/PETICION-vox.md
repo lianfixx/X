@@ -2,7 +2,7 @@
 
 - De: skill x-viral (`lianfixx/X`), 10/11/2026, por encargo de Emi: que las dos skills se alimenten y trabajen en conjunto, cada una con sus instrucciones separadas.
 - Para: quien mantenga `skills/vox-studio/` en `lianfixx/VIDEOS-IA-SKILL-MILLA`.
-- Estado: preparada y enviada el 10/11/2026 por mensaje entre sesiones de Claude a la sesión que mantiene Vox Studio; sin respuesta todavía. x-viral no escribe en ese repositorio.
+- Estado: **atendida**. Enviada el 10/11/2026; Vox Studio la aplicó a su manera, visto el 11/11/2026 en su rama `main` (versión 0.12.0): su skill tiene una sección «Solo video» que reconoce `puente/para-vox.md` como propuestas de tema para el espacio `personal`, y su perfil personal guarda `@emilianomilla_` en `cuentas.x`. x-viral no escribe en ese repositorio.
 
 ## Qué se pide
 

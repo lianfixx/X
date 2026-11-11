@@ -24,7 +24,7 @@ Trae, solo para leer:
 - `espacios/APRENDIZAJES.md` y `espacios/personal/aprendizajes.md`: lo que Emi ya corrigió. Una corrección de estilo hecha en un video vale también para los posts.
 - `espacios/personal/ideas.md`: temas pendientes que pueden ser primero un post.
 
-Sin terminal, abrir esos archivos en GitHub. El 10/11/2026 Vox Studio aún vive en una rama de trabajo, no en `main`; por eso `cuenta/perfil.json` guarda esa rama en `vox_ref` como respaldo. Cuando Vox Studio se fusione a `main`, quitar `vox_ref`. Si nada responde, trabajar con `cuenta/voz.md` y decírselo a Emi.
+Sin terminal, abrir esos archivos en GitHub. Desde el 11/11/2026 Vox Studio está en `main` y el puente lee de ahí. (`vox_ref` en `cuenta/perfil.json` sigue existiendo como respaldo opcional por si vuelve a vivir en otra rama.) Si nada responde, trabajar con `cuenta/voz.md` y decírselo a Emi.
 
 ## Qué deja x-viral para Vox Studio
 
@@ -34,14 +34,14 @@ En [puente/para-vox.md](../../../puente/para-vox.md), una línea por idea:
 python3 skills/x-viral/scripts/xviral.py vox idea "Tema, por qué funcionó en X y enlace al post" --espacio personal
 ```
 
-Se deja una idea cuando un post trajo respuestas, compartidos o seguidores por encima de lo normal de la cuenta, o cuando una lección de estilo sirve también en video. Vox Studio decide si la produce; allá se sigue preguntando la postura de Emi antes del guion.
+Se deja una idea cuando un post trajo respuestas, compartidos o seguidores por encima de lo normal de la cuenta, o cuando una lección de estilo sirve también en video. Vox Studio decide si la produce; allá se sigue preguntando la postura de Emi antes del guion. Vox Studio lo confirmó en su propia skill (sección «Solo video», versión 0.12.0): toma este archivo solo como propuestas de tema para el espacio `personal`.
 
 ## Publicar un video de Vox Studio en X
 
 1. Vox Studio termina su flujo completo, con el visto bueno de Emi sobre el MP4.
 2. x-viral escribe el post que lo acompaña como cualquier borrador de formato `video`: un solo archivo de video, de más de 10 segundos (requisito del índice de video del código).
 3. El texto del post no repite el guion: da el gancho y la razón para verlo o mandarlo.
-4. Aprobación de Emi sobre el post y programación según [programacion.md](programacion.md).
+4. Aprobación de Emi sobre el post y entrega para que él lo publique, según [programacion.md](programacion.md).
 
 Los shorts son 9:16 y pensados para TikTok y Reels; en X se ven recortados en el feed. Preguntar a Emi si quiere esa pieza en X antes de programarla.
 

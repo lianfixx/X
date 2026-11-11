@@ -1,10 +1,10 @@
 # Programar con aprobación de Emi
 
-Emi eligió el 10/11/2026: la skill puede dejar posts programados en X, **uno por uno y solo después de su visto bueno**. Nada se publica solo.
+Emi eligió el 10/11/2026 que la skill programara en X con su visto bueno, post por post. El 11/11/2026 eso quedó en pausa porque X bloquea el inicio de sesión desde las máquinas de las IA: ahora la IA entrega y Emi publica. Nada se publica solo.
 
 ## Regla de oro
 
-La IA solo toca el botón de programar. No da like, no sigue, no responde, no cita, no manda mensajes y no borra en nombre de Emi. El código clasifica como automatización las secuencias mecánicas de acciones y las interacciones sobre posts que nunca se mostraron en pantalla; una cuenta nueva no puede permitirse esa etiqueta. La conversación la lleva Emi; la IA le prepara borradores de respuesta si los pide.
+La IA no opera la cuenta. No da like, no sigue, no responde, no cita, no manda mensajes y no borra en nombre de Emi. El código clasifica como automatización las secuencias mecánicas de acciones y las interacciones sobre posts que nunca se mostraron en pantalla; una cuenta nueva no puede permitirse esa etiqueta. La conversación la lleva Emi; la IA le prepara borradores de respuesta si los pide.
 
 ## Requisitos de cada post
 
@@ -16,20 +16,32 @@ La IA solo toca el botón de programar. No da like, no sigue, no responde, no ci
 
 Una aprobación general («programa lo de la semana») no basta: se le enseña cada texto.
 
-## Cómo se programa
+## Cómo sale un post (vigente desde el 11/11/2026)
 
-X permite programar desde la web: en el cuadro de redacción, el icono de calendario. No se usan servicios de terceros ni la API.
+**Emi publica o programa; la IA entrega.** X bloquea el inicio de sesión desde box y desde la máquina virtual de Muse («Sorry, you are not allowed to log in at this time», intentos del 10 y 11/11/2026, antes de pedir contraseña o código). Por decisión de Emi, **ninguna IA vuelve a intentar iniciar sesión en X**: insistir desde máquinas en la nube puede acabar en un bloqueo de la cuenta.
 
-Con box (la computadora en la nube de Emi) u otro navegador con su sesión:
+Para cada post aprobado, la IA entrega un bloque listo para copiar:
 
-1. Abrir `https://x.com/compose/post`. Si pide iniciar sesión, verificación en dos pasos o un captcha, darle a Emi el enlace para que lo haga él; la IA no escribe ni guarda contraseñas ni códigos.
-2. Comprobar que la cuenta activa es `@emilianomilla_`.
-3. Pegar el texto aprobado tal cual. Adjuntar el archivo aprobado (foto o video); si es video, uno solo.
-4. Icono de calendario. **Leer la zona horaria que muestra el cuadro**: X usa la del navegador o de la cuenta, y box es una máquina en la nube que puede no estar en hora de México. Convertir la hora del borrador a esa zona, elegir fecha y hora, confirmar → **Programar**.
-5. Abrir la lista de programados y verificar texto, archivo adjunto, fecha y hora (ya convertida). Tomar captura.
-6. Cambiar `estado` a `programado` en el borrador y avisar a Emi con la captura.
+```text
+POST 2026-11-17-a · martes 17/11, 08:30 (hora del centro de México) · pilar: ia-derecho
+Archivo: (ninguno | la foto o el video aprobado)
+----
+(texto exacto aprobado)
+```
 
-Sin navegador con sesión: entregar a Emi el texto listo para copiar, con fecha y hora, y decirlo así. No decir «programado» si no se verificó en la lista de programados.
+Emi lo pega en X desde su teléfono o su computadora. Para programarlo: en x.com, cuadro de redacción → icono de calendario → fecha y hora → Programar. Si su aplicación no muestra el calendario, lo publica a la hora indicada. Después le dice a la IA «publicado» y, si puede, el enlace.
+
+La IA no dice «programado» ni «publicado» por su cuenta: cambia el `estado` del borrador cuando Emi lo confirma.
+
+### Con navegador y sesión de Emi (hoy no disponible)
+
+Si algún día Emi abre él mismo una sesión de X en un navegador que la IA pueda usar, y lo pide de forma expresa:
+
+1. Abrir `https://x.com/compose/post` y comprobar que la cuenta activa es `@emilianomilla_`. La IA no escribe contraseñas ni códigos.
+2. Pegar el texto aprobado tal cual y adjuntar el archivo aprobado (foto o video); si es video, uno solo.
+3. Icono de calendario. **Leer la zona horaria que muestra el cuadro** y convertir la hora del borrador a esa zona. Confirmar → **Programar**.
+4. Abrir la lista de programados, verificar texto, archivo, fecha y hora, y tomar captura.
+5. Cambiar `estado` a `programado` y avisar a Emi con la captura.
 
 ## Si un post programado tiene que cambiar
 
@@ -47,4 +59,6 @@ Las métricas se anotan a las 48 horas, cuando el post ya salió de los índices
 
 ## Estado de esta función
 
-El 10/11/2026 se documentó el procedimiento; **no se ha ejecutado** contra la cuenta real porque es nueva y no había sesión abierta. La primera vez se hace con Emi mirando, y lo que cambie en la interfaz de X se corrige aquí.
+- 10/11/2026: procedimiento con navegador documentado, sin ejecutar.
+- 10 y 11/11/2026: Muse intentó iniciar sesión en X desde box y desde su máquina virtual; X lo bloqueó las dos veces. Emi indicó no volver a intentarlo.
+- Desde el 11/11/2026 el modo vigente es la entrega para copiar. No se ha usado todavía con un post real: la primera semana empieza el 16/11/2026.

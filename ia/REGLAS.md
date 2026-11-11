@@ -6,7 +6,8 @@ Valen igual en Claude, ChatGPT, Codex, Gemini o cualquier otra IA, y para person
 
 ## Prohibido
 
-- Publicar, programar o interactuar en X (like, seguir, responder, citar, mensaje, borrar) sin el visto bueno de Emi a ese post exacto.
+- Intentar iniciar sesión en X desde box, una máquina virtual o cualquier otro entorno (decisión de Emi del 11/11/2026, tras dos bloqueos de X).
+- Publicar, programar o interactuar en X (like, seguir, responder, citar, mensaje, borrar) por Emi.
 - Correr `xviral.py aprobar` o escribir a mano `aprobado_por_emi`, `aprobado_huella` o `reescrito` sin que Emi haya aprobado ese texto.
 - Publicar texto crudo de una IA, o inventar vivencias, opiniones, cifras o citas de Emi.
 - Mencionar clientes o asuntos de cualquier despacho, ni siquiera anonimizados; nombrar a Castorena Abogados o a sus licenciados; atacar a personas.

@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-11 · x-viral 1.0.3: X bloquea el inicio de sesión; Emi publica, la IA entrega
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 11/11/2026, en chat de Claude Code: reporte del encargo de Muse. Hechas: rama por defecto `main`, conector de GitHub en la tarea semanal, skill x-viral 1.0.2 instalada en Claude (y vox-studio 0.12.0). Bloqueadas: iniciar sesión en X y leer datos del perfil, porque X rechazó el inicio de sesión en box y en la máquina virtual el 10 y el 11/11 («Sorry, you are not allowed to log in at this time»). Instrucción de Emi: no intentar iniciar sesión en X.
+- Cambios: el modo de trabajo pasa de «programar con aprobación» a «la IA entrega cada post aprobado listo para copiar y Emi lo publica o programa». Queda prohibido en `ia/REGLAS.md` intentar iniciar sesión en X. Ajustados la skill (regla 1, flujo, estado de la cuenta), `programacion.md` (modo vigente, formato de entrega, vía con navegador como no disponible), el plan (Emi revisa sus 24 posts y quita la protección desde su teléfono; métricas por captura), los encargos, `AGENTS.md`, `CLAUDE.md` y las instrucciones de proyecto. Puente con Vox Studio: ya está en `main` y atendió la petición (sección «Solo video» de su skill); se quitó `vox_ref` del perfil y se cerró `puente/PETICION-vox.md`. `docs/PROMPT-MUSE.md` queda cerrado con su resultado.
+- Archivos: `skills/x-viral/SKILL.md` y sus dos puentes, `skills/x-viral/references/{programacion,playbook,prompts,conexion-vox,portabilidad}.md`, `cuenta/perfil.json`, `puente/PETICION-vox.md`, `ia/{REGLAS,INSTRUCCIONES_PROYECTO}.md`, `docs/PROMPT-MUSE.md`, `AGENTS.md`, `CLAUDE.md`, `README.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado; `xviral.py vox leer` → aprobado, lee de la rama `main` de Vox Studio; estado de las tareas de Muse → según el reporte de Emi, no comprobado por esta sesión salvo la existencia de `main`; inicio de sesión en X → no intentado, por instrucción.
+- Pendiente: (a) Emi: revisar sus 24 posts y quitar la protección desde su teléfono; pasar la fecha exacta de «Se unió» y el número de seguidores; decidir Premium. (b) Volver a instalar en Claude la versión 1.0.3 de la skill (la instalada es la 1.0.2 y aún habla de programar desde box). (c) Primera semana el 16/11/2026.
+
 ## 2026-11-10 · Candidatas de conversación, encargo para Muse y fecha de arranque
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 10/11/2026, en chat de Claude Code: sugerir cuentas candidatas, dar un encargo para que Muse haga lo que falta, empezar a publicar el lunes siguiente; dijo que piensa contratar Premium y que recuerda que su cuenta tiene cerca de un año.

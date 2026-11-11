@@ -8,7 +8,7 @@ Adaptación del plan del video de Santi a una cuenta nueva, con tres pilares y c
 
 ## Fase 0 · Preparar la cuenta (una vez)
 
-0. **Quitar la protección**, cuando Emi lo decida: Configuración → Privacidad y seguridad → Audiencia, multimedia y etiquetas → desmarcar «Proteger tus posts». Antes, **revisar los 24 posts que ya existen**: al abrir la cuenta quedan públicos. Emi borra los que no quiera asociar a la cuenta o que choquen con sus límites ([pilares.md](pilares.md)). Después, poner `"protegida": false` en `cuenta/perfil.json`.
+0. **Quitar la protección**, cuando Emi lo decida y desde su propio teléfono: Configuración → Privacidad y seguridad → Audiencia, multimedia y etiquetas → desmarcar «Proteger tus posts». Antes, **revisar los 24 posts que ya existen**: al abrir la cuenta quedan públicos. Las IA no pueden leerlos (cuenta protegida y sin sesión), así que los revisa Emi; si quiere una segunda opinión, pega el texto o manda capturas. Borra los que no quiera asociar a la cuenta o que choquen con sus límites ([pilares.md](pilares.md)). Después avisa para poner `"protegida": false` en `cuenta/perfil.json`.
 1. **Perfil completo**: foto propia, nombre, bio que diga los tres temas y de dónde habla Emi. El clic al perfil pesa 0; la bio sirve para que quien llega decida seguir, que pesa 4. **Criterio.**
 2. **Habitar los temas**: seguir y leer cuentas **de otras personas** que Emi respete en IA y Derecho, en entrenamiento y en análisis político mexicano, y anotar de 5 a 10 por pilar en `cuenta/mutuals.md`. No son cuentas suyas ni cuentas desde las que se publique: son con quienes conversa. Sirven por dos razones del código: el historial de la propia cuenta y de quienes interactúan orienta a quién se recomienda, y cuando dos cuentas se siguen mutuamente pesa cuatro veces más que una responda a los posts de la otra. Con 2 seguidores, casi nadie ve hoy un post en su Inicio; estas conversaciones son la forma legítima de cambiarlo.
 3. **Sin atajos**: nada de comprar seguidores, grupos de intercambio de likes, seguir y dejar de seguir, ni herramientas que interactúen solas. El código modela esas secuencias y una etiqueta de cuenta saca todos los posts de las recomendaciones a quienes no siguen a Emi.
@@ -42,7 +42,7 @@ Adaptación del plan del video de Santi a una cuenta nueva, con tres pilares y c
 
 ## Fase 4 · Medir y aprender
 
-22. **A las 48 horas** de cada post, anotar métricas (`xviral.py publicado ID --metricas …`): vistas, respuestas, citas, compartidos, seguidores ganados.
+22. **A las 48 horas** de cada post, Emi pasa los números de la analítica del post (captura o copiados) y la IA anota las métricas (`xviral.py publicado ID --metricas …`): vistas, respuestas, citas, compartidos, seguidores ganados.
 23. **Cada semana**: `xviral.py balance`, qué funcionó por pilar, una lección con `xviral.py aprender` y, si un tema pide video, `xviral.py vox idea`.
 24. **Cada mes**: revisión con Emi (encargo 5 de [prompts.md](prompts.md)), nota en `cuenta/diagnosticos/AAAA-MM.md` y ajuste del balance si él lo decide.
 25. **Lo que funcionó se reescribe**, no se repite: mismo tema, otro ángulo, pasadas las 48 horas.

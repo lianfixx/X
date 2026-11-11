@@ -1,9 +1,9 @@
 ---
 name: x-viral
-description: "Planear, redactar, revisar, programar con aprobación y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
+description: "Planear, redactar, revisar, entregar para publicar y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
 license: Uso personal de Emiliano García Milla. Sin licencia de reutilización para terceros.
 metadata:
-  version: "1.0.2"
+  version: "1.0.3"
   release_date: "2026-11-10"
   language: "es-MX"
   algoritmo_commit: "660cd74"
@@ -17,7 +17,7 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 
 ## Reglas que no se rompen
 
-1. **Emi aprueba cada post.** Nada se programa ni se publica sin su visto bueno a ese texto exacto. La IA no da like, no sigue, no responde ni manda mensajes por él.
+1. **Emi aprueba cada post y es él quien lo publica.** La IA entrega el texto aprobado listo para copiar. No inicia sesión en X (X lo bloquea desde las máquinas de las IA y Emi pidió no reintentarlo), no da like, no sigue, no responde ni manda mensajes por él.
 2. **La IA propone, Emi reescribe.** No sale texto crudo de una IA. No se inventan vivencias, opiniones, cifras ni citas.
 3. **Límites de Emi**: nunca clientes ni asuntos, no nombrar a Castorena, sin ataques personales, toda cita legal con fuente oficial verificada. Detalle en [pilares.md](references/pilares.md).
 4. **En política, primero su postura.** Se le pregunta antes de redactar y va en `opinion_emi`.
@@ -27,7 +27,7 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 
 ## Estado de la cuenta
 
-Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil.json`). Hasta que Emi quite la protección, los posts no se recomiendan a nadie: ver la fase 0 de [playbook.md](references/playbook.md). Se puede redactar y planear desde ya.
+Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil.json`). Hasta que Emi quite la protección, los posts no se recomiendan a nadie: ver la fase 0 de [playbook.md](references/playbook.md). Ninguna IA puede ver la cuenta por dentro: lo que no sea público (sus posts mientras tenga candado, métricas, lista de programados) lo trae Emi con capturas o copiando los números. Se puede redactar y planear desde ya.
 
 ## Qué leer según el encargo
 
@@ -37,7 +37,7 @@ Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil
 | Escribir o revisar un post, una cita (quote) o un artículo | [redaccion.md](references/redaccion.md), [pilares.md](references/pilares.md) |
 | Semana o calendario | Lo anterior, [playbook.md](references/playbook.md) y el [ejemplo de semana](assets/semana.ejemplo.json) |
 | Qué premia o castiga X, dudas sobre visibilidad | [algoritmo.md](references/algoritmo.md) |
-| Programar | [programacion.md](references/programacion.md) |
+| Entregar un post para que Emi lo publique | [programacion.md](references/programacion.md) |
 | Video de Vox Studio o ideas para video | [conexion-vox.md](references/conexion-vox.md) |
 | Revisar si cambió el algoritmo | Sección «Mantener al día» y [prompts.md](references/prompts.md) |
 | Encargos listos para copiar | [prompts.md](references/prompts.md) |
@@ -50,7 +50,7 @@ Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil
 4. **Borrador** en `cuenta/privado/` con el formato de [redaccion.md](references/redaccion.md): texto, pilar, señales, por qué, riesgos.
 5. **Revisar**: `xviral revisar ARCHIVO`. Corregir hasta que no haya errores; atender los avisos.
 6. **Emi lo reescribe y aprueba** ese texto exacto y su foto o video. Solo entonces: `xviral aprobar ARCHIVO ID --medio "dónde lo aprobó"`, que anota la fecha y la huella del texto. Si el texto cambia después, la aprobación deja de valer.
-7. **Programar** según [programacion.md](references/programacion.md), con `xviral revisar ARCHIVO --para programado` limpio.
+7. **Entregar para publicar** según [programacion.md](references/programacion.md), con `xviral revisar ARCHIVO --para programado` limpio: bloque listo para copiar con fecha y hora. Emi lo publica o lo programa y lo confirma.
 8. **Anotar** lo publicado (`xviral publicado …`), sus métricas a las 48 horas y la lección (`xviral aprender "…"`).
 
 Para una semana: lo mismo con `xviral semana ARCHIVO`, que además valida cadencia, separación y balance.
@@ -89,4 +89,4 @@ Cada corrección de Emi y cada resultado se guarda: `xviral aprender "qué pasó
 
 ## Terminado
 
-Un post está terminado cuando: `revisar` no da errores, Emi lo reescribió y aprobó, y quedó programado y verificado en la lista de programados (o entregado para que él lo publique, dicho así). Después de publicarse: anotado con `xviral publicado`, con métricas a las 48 horas y su lección. Todo cambio en archivos del repositorio (publicados, aprendizajes, voz, la skill) se registra en `CHANGELOG.md` según `ia/PROTOCOLO.md`; varias anotaciones del mismo día pueden ir en una sola entrada.
+Un post está terminado cuando: `revisar` no da errores, Emi lo reescribió y aprobó, se le entregó listo para copiar y él confirmó que lo publicó o programó. Después de publicarse: anotado con `xviral publicado`, con métricas a las 48 horas y su lección. Todo cambio en archivos del repositorio (publicados, aprendizajes, voz, la skill) se registra en `CHANGELOG.md` según `ia/PROTOCOLO.md`; varias anotaciones del mismo día pueden ir en una sola entrada.

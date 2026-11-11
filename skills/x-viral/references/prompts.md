@@ -54,8 +54,9 @@ Pregúntame qué pasó esta semana (entrenos, casos de IA que usé, noticias que
 importan y mi postura sobre cada una). Con eso propón la semana: una o dos
 publicaciones por día, separadas al menos cuatro horas, un tercio por pilar.
 Valida con «xviral.py semana» hasta que no haya errores y enséñame cada texto
-para corregirlo con mis palabras. No programes nada sin mi visto bueno, post por post,
-y anótalo con «xviral.py aprobar» solo cuando te lo dé.
+para corregirlo con mis palabras. Anota mi visto bueno con «xviral.py aprobar» solo
+cuando te lo dé, y entrégame cada post aprobado listo para copiar, con su fecha y hora:
+yo lo publico.
 ```
 
 ## 4. Un post a partir de una idea
@@ -71,8 +72,8 @@ con «xviral.py revisar» y dime cuál publicarías y por qué.
 ## 5. Revisión mensual
 
 ```text
-Usa la skill x-viral. Pídeme las métricas del mes (o léelas de la analítica de X si
-tengo sesión abierta en box) y anótalas con «xviral.py publicado ID --metricas».
+Usa la skill x-viral. Pídeme las métricas del mes (te paso capturas o los números; no
+puedes entrar a mi cuenta) y anótalas con «xviral.py publicado ID --metricas».
 Dime qué posts trajeron seguidores, respuestas y compartidos, cuáles no, y qué
 patrón ves por pilar y formato. Si mi cuenta ya cumple los requisitos, revisa
 conmigo el reporte Under the Hood. Guarda cada lección con «xviral.py aprender»,

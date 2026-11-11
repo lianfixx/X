@@ -1,6 +1,6 @@
 # x-viral · la skill de X de Emi
 
-Skill para planear, redactar, revisar, programar con aprobación y medir las publicaciones de `@emilianomilla_` en X, apoyada en el código público del algoritmo de X ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)).
+Skill para planear, redactar, revisar, entregar para publicar y medir las publicaciones de `@emilianomilla_` en X, apoyada en el código público del algoritmo de X ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)).
 
 Tres pilares a partes iguales: **IA + Derecho en México**, **estilo de vida y gym** y **opinión política**. Sirve en cualquier IA.
 
@@ -17,7 +17,7 @@ Del video de Santi Muñoz [«Esto es lo que Claude encontró en el algoritmo de 
 | [`references/playbook.md`](skills/x-viral/references/playbook.md) | El plan para la cuenta, paso a paso. |
 | [`references/pilares.md`](skills/x-viral/references/pilares.md) | Pilares, balance, política y límites. |
 | [`references/redaccion.md`](skills/x-viral/references/redaccion.md) | Cómo se escribe y se revisa un post. |
-| [`references/programacion.md`](skills/x-viral/references/programacion.md) | Programar en X con aprobación. |
+| [`references/programacion.md`](skills/x-viral/references/programacion.md) | Cómo se le entrega un post a Emi para que lo publique. |
 | [`references/conexion-vox.md`](skills/x-viral/references/conexion-vox.md) | Puente con Vox Studio (videos). |
 | [`references/prompts.md`](skills/x-viral/references/prompts.md) | Encargos listos para copiar. |
 | [`references/video-santi.md`](skills/x-viral/references/video-santi.md) | Qué hizo y dijo Santi en el video, y qué se sostiene. |
@@ -46,13 +46,13 @@ Python 3.9 o posterior, sin dependencias (probado con 3.9, 3.11, 3.12 y 3.13). S
 
 ## Cómo se mantiene al día
 
-- Cada lunes, GitHub compara el código de X con lo guardado ([`algoritmo.yml`](.github/workflows/algoritmo.yml)) y marca en rojo si cambió algún parámetro, interruptor, archivo citado o sección de novedades. No vigila el resto del repositorio de X. GitHub pausa los workflows programados tras 60 días sin actividad en el repositorio.
+- La rama por defecto es `main`. Cada lunes, GitHub compara el código de X con lo guardado ([`algoritmo.yml`](.github/workflows/algoritmo.yml)) y marca en rojo si cambió algún parámetro, interruptor, archivo citado o sección de novedades. No vigila el resto del repositorio de X. GitHub pausa los workflows programados tras 60 días sin actividad en el repositorio.
 - Emi tiene además una tarea programada semanal en Claude (creada el 10/11/2026, lunes 12:47 del centro de México; vive en su cuenta de Claude, no en este repositorio) que hace la misma comparación y, si hay cambios, actualiza la skill y propone un pull request. Su primera ejecución es el 16/11/2026; hasta entonces no está probada.
 - Cada push pasa el control de [`control.yml`](.github/workflows/control.yml).
 
 ## Estado
 
-Versión 1.0.2 (10/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta está protegida y casi sin uso, así que no hay métricas ni correcciones de voz de Emi; la programación en X no se ha ejecutado contra la cuenta real; la tarea semanal aún no corre por primera vez.
+Versión 1.0.3 (11/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta está protegida y casi sin uso, así que no hay métricas ni correcciones de voz de Emi; ninguna IA puede iniciar sesión en X (X lo bloquea), así que Emi publica lo que la skill le entrega; la tarea semanal aún no corre por primera vez.
 
 El repositorio es público. Contiene las reglas de trabajo de Emi (qué no se publica y por qué), no borradores ni datos de terceros.
 
