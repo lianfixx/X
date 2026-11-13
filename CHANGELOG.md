@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Perfil público propuesto y Matriz de Redes
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «dame la descripción perfecta para X» y crear una sesión que sea la matriz de redes sociales, que decida y que todo se documente y retroalimente entre redes y video.
+- Cambios: `cuenta/perfil-publico.md` con nombre, biografía (tres opciones contadas con el contador de la skill), ubicación y enlace a emilianomilla.site, con su razonamiento. Se abrió la sesión «Matriz de Redes Sociales» con un encargo detallado (integrantes, modelo de datos, criterios de decisión, contrato de datos entre skills, ciclos diario, semanal, mensual y trimestral, protocolos, registro en la Matriz General); repositorio previsto `lianfixx/REDES`. Se avisó a las sesiones de LinkedIn, TikTok e Instagram. x-viral adoptará el contrato de datos cuando la Matriz de Redes lo proponga.
+- Archivos: `cuenta/perfil-publico.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado; sesión creada y mensajes entregados según la herramienta de sesiones.
+- Pendiente: Emi elige biografía y la cambia; crear `lianfixx/REDES` junto con los otros tres repositorios.
+
 ## 2026-11-13 · Skills hermanas para LinkedIn, TikTok e Instagram
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 13/11/2026: hacer algo como x-viral para LinkedIn, TikTok e Instagram (Reels), cada una en su propia sesión.
