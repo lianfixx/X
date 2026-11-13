@@ -1,6 +1,6 @@
 # x-viral · la skill de X de Emi
 
-Skill para planear, redactar, revisar, entregar para publicar y medir las publicaciones de `@emilianomilla_` en X, apoyada en el código público del algoritmo de X ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)).
+Skill para planear, redactar, revisar, publicar con aprobación (API oficial de X) y medir las publicaciones de `@emilianomilla_` en X, apoyada en el código público del algoritmo de X ([xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)).
 
 Tres pilares a partes iguales: **IA + Derecho en México**, **estilo de vida y gym** y **opinión política**. Sirve en cualquier IA.
 
@@ -18,6 +18,8 @@ Del video de Santi Muñoz [«Esto es lo que Claude encontró en el algoritmo de 
 | [`references/pilares.md`](skills/x-viral/references/pilares.md) | Pilares, balance, política y límites. |
 | [`references/redaccion.md`](skills/x-viral/references/redaccion.md) | Cómo se escribe y se revisa un post. |
 | [`references/programacion.md`](skills/x-viral/references/programacion.md) | Cómo se le entrega un post a Emi para que lo publique. |
+| [`references/api.md`](skills/x-viral/references/api.md) | Publicar por la API oficial de X: arquitectura, costos y llaves. |
+| [`references/perfil-y-administracion.md`](skills/x-viral/references/perfil-y-administracion.md) | Perfil completo, privacidad, Premium, herramientas de creador y gasto. |
 | [`references/conexion-vox.md`](skills/x-viral/references/conexion-vox.md) | Puente con Vox Studio (videos). |
 | [`references/prompts.md`](skills/x-viral/references/prompts.md) | Encargos listos para copiar. |
 | [`references/video-santi.md`](skills/x-viral/references/video-santi.md) | Qué hizo y dijo Santi en el video, y qué se sostiene. |
@@ -52,7 +54,7 @@ Python 3.9 o posterior, sin dependencias (probado con 3.9, 3.11, 3.12 y 3.13). S
 
 ## Estado
 
-Versión 1.0.3 (11/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta está protegida y casi sin uso, así que no hay métricas ni correcciones de voz de Emi; ninguna IA puede iniciar sesión en X (X lo bloquea), así que Emi publica lo que la skill le entrega; la tarea semanal aún no corre por primera vez.
+Versión 1.1.0 (13/11/2026). Probado: el script y el control, con los resultados que constan en [`CHANGELOG.md`](CHANGELOG.md) y en la [auditoría](docs/AUDITORIA-2026-11-10.md). **No probado todavía**: la cuenta está protegida y casi sin uso, así que no hay métricas ni correcciones de voz de Emi; ninguna IA puede iniciar sesión en X (X lo bloquea), así que Emi publica lo que la skill le entrega; la tarea semanal aún no corre por primera vez.
 
 El repositorio es público. Contiene las reglas de trabajo de Emi (qué no se publica y por qué), no borradores ni datos de terceros.
 

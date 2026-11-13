@@ -16,6 +16,10 @@ La IA no opera la cuenta. No da like, no sigue, no responde, no cita, no manda m
 
 Una aprobación general («programa lo de la semana») no basta: se le enseña cada texto.
 
+## Por la API (decidido el 13/11/2026)
+
+Emi decidió publicar por la API oficial de X lo que apruebe, desde el panel de la Matriz de Redes o desde Claude. Detalle, costos y llaves en [api.md](api.md). Hasta que la conexión esté hecha y probada, vale la entrega para copiar de abajo.
+
 ## Cómo sale un post (vigente desde el 11/11/2026)
 
 **Emi publica o programa; la IA entrega.** X bloquea el inicio de sesión desde box y desde la máquina virtual de Muse («Sorry, you are not allowed to log in at this time», intentos del 10 y 11/11/2026, antes de pedir contraseña o código). Por decisión de Emi, **ninguna IA vuelve a intentar iniciar sesión en X**: insistir desde máquinas en la nube puede acabar en un bloqueo de la cuenta.

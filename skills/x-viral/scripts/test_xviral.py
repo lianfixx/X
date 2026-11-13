@@ -242,7 +242,10 @@ class Borrador(unittest.TestCase):
         e, w, _ = rev(base(texto="La nota completa: https://bit.ly/abc"))
         self.assertEqual(e, [])
         self.assertTrue(any("acortador" in m for m in w))
-        self.assertEqual(rev(base(texto="La nota completa: https://www.dof.gob.mx/nota"))[1], [])
+        w = rev(base(texto="La nota completa: https://www.dof.gob.mx/nota"))[1]
+        self.assertEqual([m for m in w if "acortador" in m], [])
+        self.assertTrue(any("0.20 USD" in m for m in w))
+        self.assertFalse(any("0.20 USD" in m for m in rev(base())[1]))
 
     def test_duplicado(self):
         hist = [{"id": "viejo", "fecha": "2026-11-01", "texto": base()["texto"].replace("Encontró", "Halló")}]

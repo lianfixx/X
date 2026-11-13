@@ -576,6 +576,9 @@ def revisar(b, pesos: dict, historial: list[dict], cfg: dict, para: str = "") ->
     etiquetas = re.findall(r"(?<!\w)#\w+", texto)
     if len(etiquetas) > 2:
         w.append(f"{len(etiquetas)} hashtags: el código no los premia; dejan el texto con aspecto de plantilla")
+    if URL.search(texto) or DOMINIO.search(texto):
+        w.append("enlace en el post: por la API de X cuesta 0.20 USD frente a 0.015 sin enlace (precio oficial "
+                 "al 13/11/2026); si el enlace no es el valor del post, mejor en la bio")
     for url in URL.findall(texto):
         if dominio(url) in ACORTADORES:
             w.append(f"acortador ({dominio(url)}): el código juzga el destino final, no el acortador, "

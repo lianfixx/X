@@ -1,9 +1,9 @@
 ---
 name: x-viral
-description: "Planear, redactar, revisar, entregar para publicar y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
+description: "Planear, redactar, revisar, publicar con aprobación (API oficial) y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
 license: Uso personal de Emiliano García Milla. Sin licencia de reutilización para terceros.
 metadata:
-  version: "1.0.3"
+  version: "1.1.0"
   release_date: "2026-11-10"
   language: "es-MX"
   algoritmo_commit: "660cd74"
@@ -17,7 +17,7 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 
 ## Reglas que no se rompen
 
-1. **Emi aprueba cada post y es él quien lo publica.** La IA entrega el texto aprobado listo para copiar. No inicia sesión en X (X lo bloquea desde las máquinas de las IA y Emi pidió no reintentarlo), no da like, no sigue, no responde ni manda mensajes por él.
+1. **Emi aprueba cada post; sale por la API oficial o lo publica él.** Desde el 13/11/2026 lo aprobado se publica por la API de X, desde el panel de la Matriz de Redes o desde Claude ([api.md](references/api.md)); mientras la API no esté conectada, se le entrega listo para copiar. Ninguna IA inicia sesión en X como persona (X lo bloquea y Emi lo prohibió), ni da like, sigue, responde o manda mensajes por él.
 2. **La IA propone, Emi reescribe.** No sale texto crudo de una IA. No se inventan vivencias, opiniones, cifras ni citas.
 3. **Límites de Emi**: nunca clientes ni asuntos, no nombrar a Castorena, sin ataques personales, toda cita legal con fuente oficial verificada. Detalle en [pilares.md](references/pilares.md).
 4. **En política, primero su postura.** Se le pregunta antes de redactar y va en `opinion_emi`.
@@ -38,6 +38,8 @@ Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil
 | Semana o calendario | Lo anterior, [playbook.md](references/playbook.md) y el [ejemplo de semana](assets/semana.ejemplo.json) |
 | Qué premia o castiga X, dudas sobre visibilidad | [algoritmo.md](references/algoritmo.md) |
 | Entregar un post para que Emi lo publique | [programacion.md](references/programacion.md) |
+| Publicar por la API, costos y llaves | [api.md](references/api.md) |
+| Perfil, privacidad, Premium, herramientas de creador y gasto | [perfil-y-administracion.md](references/perfil-y-administracion.md) |
 | Video de Vox Studio o ideas para video | [conexion-vox.md](references/conexion-vox.md) |
 | Revisar si cambió el algoritmo | Sección «Mantener al día» y [prompts.md](references/prompts.md) |
 | Encargos listos para copiar | [prompts.md](references/prompts.md) |

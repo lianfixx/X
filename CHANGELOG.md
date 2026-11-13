@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · x-viral 1.1.0: publicación por la API oficial, perfil y administración
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: «usaremos la API»; panel para ver, editar y publicar los posts (o autorizar desde Claude); perfil completo y cómo administrarlo, «sin temor a gastar, pero sin gastar a lo bruto»; usar las herramientas de creador; texto para el formulario de la cuenta de desarrollador. Abrió su cuenta de desarrollador ese día.
+- Cambios: (1) Regla nueva: lo que Emi apruebe puede publicarse por la API oficial de X; sigue prohibido iniciar sesión como persona, interactuar por él y escribir las llaves fuera del panel (`ia/REGLAS.md`, `AGENTS.md`, `CLAUDE.md`, instrucciones de proyecto, regla 1 de la skill, `programacion.md`). (2) `references/api.md`: arquitectura (panel de la Matriz de Redes en Cloudflare con las llaves como secretos; aprobación desde el panel o desde Claude), precios oficiales (0.015 USD por post, 0.20 con enlace), tope de 10 USD al mes sin recarga automática, enlaces en la bio, app con lectura y escritura sin mensajes directos. (3) `references/perfil-y-administracion.md`: perfil completo, privacidad y seguridad, notificaciones, Premium (no da ventaja en el ranking), herramientas de creador (analítica, Creator Studio, Original Content Rewards, Media Studio, artículos, listas), rutina y política de gasto. (4) `revisar` avisa del costo cuando un post lleva enlace. (5) El panel se le encargó a la sesión de la Matriz de Redes, dueña del panel de todas las redes.
+- Archivos: `skills/x-viral/{SKILL.md,references/api.md,references/perfil-y-administracion.md,references/programacion.md,scripts/xviral.py,scripts/test_xviral.py}`, puentes de la skill, `cuenta/perfil.json`, `ia/{REGLAS,INSTRUCCIONES_PROYECTO}.md`, `AGENTS.md`, `CLAUDE.md`, `README.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado (pruebas de `xviral.py` y `verificar.py`, skill y puentes); conexión con la API → no hecha (faltan la app y sus llaves); precios → resumen de la página oficial vía búsqueda, no abierta directamente.
+- Pendiente: Emi crea la app y fija el tope de gasto; la Matriz de Redes construye el panel con la publicación; primera publicación de prueba con Emi mirando; reinstalar la skill 1.1.0 en Claude.
+
 ## 2026-11-13 · Coordinación con la Matriz de Redes y campaña de lanzamiento
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026, con respuestas de Emi: objetivos marca personal > influencia política > comunidad; aprobación en paquete semanal; campaña de lanzamiento «lo que construí uniendo IA y Derecho» con un post en X y, después, un post derivado de su video del DOF.
