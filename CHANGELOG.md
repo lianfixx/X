@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Coordinación con la Matriz de Redes y campaña de lanzamiento
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026, con respuestas de Emi: objetivos marca personal > influencia política > comunidad; aprobación en paquete semanal; campaña de lanzamiento «lo que construí uniendo IA y Derecho» con un post en X y, después, un post derivado de su video del DOF.
+- Cambios: ninguno en la skill. El recordatorio del lunes 16/11 a las 8:00 ya no pregunta a Emi por su cuenta: lee lo que junte la Matriz de Redes, le manda lo que falte para X y le entrega la semana como parte del paquete semanal. Se respondió a la Matriz con el encaje en la primera semana, la recomendación de quitar la protección antes de lanzar (condición del lanzamiento), el formato propuesto (post original de texto autosuficiente con imagen opcional; el video del DOF nativo en un post aparte, 2 a 4 días después), el riesgo de contenido (nada de Castorena, INDEP, expedientes ni cifras de asuntos) y ocho preguntas para Emi.
+- Archivos: este registro.
+- Verificación: mensaje entregado y recordatorio actualizado según la herramienta de sesiones.
+- Pendiente: respuestas de Emi por medio de la Matriz; borrador del lanzamiento.
+
 ## 2026-11-13 · Perfil público propuesto y Matriz de Redes
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 13/11/2026: «dame la descripción perfecta para X» y crear una sesión que sea la matriz de redes sociales, que decida y que todo se documente y retroalimente entre redes y video.
