@@ -193,6 +193,15 @@ class Borrador(unittest.TestCase):
         for texto, esperado in casos.items():
             self.assertTrue(any(esperado in m for m in errores(texto)), texto)
 
+    def test_nunca_decir_que_lo_hizo_una_ia(self):
+        for texto in ("Este post lo escribió una IA.", "Video generado por inteligencia artificial.",
+                      "Resumen hecho por ChatGPT.", "Me lo armó una IA en diez minutos.", "Texto de IA, sin editar."):
+            self.assertTrue(any("lo hizo una IA" in m for m in errores(texto)), texto)
+        for texto in ("Armé una IA que revisa el Diario Oficial dos veces por semana.",
+                      "Desde el 7 de noviembre trabajo con IA y armé un sistema que ordena todo mi trabajo.",
+                      "La IA reemplaza tareas, no criterio.", "Uso IA en el trabajo jurídico y te cuento qué sirve."):
+            self.assertFalse(any("lo hizo una IA" in m for m in errores(texto)), texto)
+
     def test_texto_nfd_no_esquiva_los_limites(self):
         texto = unicodedata.normalize("NFD", "Ese diputado es un imbécil. Sígueme para más.")
         e = errores(texto)

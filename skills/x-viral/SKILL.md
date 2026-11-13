@@ -19,7 +19,7 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 
 1. **Emi aprueba cada post; sale por la API oficial o lo publica él.** Desde el 13/11/2026 lo aprobado se publica por la API de X, desde el panel de la Matriz de Redes o desde Claude ([api.md](references/api.md)); mientras la API no esté conectada, se le entrega listo para copiar. Ninguna IA inicia sesión en X como persona (X lo bloquea y Emi lo prohibió), ni da like, sigue, responde o manda mensajes por él.
 2. **La IA propone, Emi reescribe.** No sale texto crudo de una IA. No se inventan vivencias, opiniones, cifras ni citas.
-3. **Límites de Emi**: nunca clientes ni asuntos, no nombrar a Castorena, sin ataques personales, toda cita legal con fuente oficial verificada. Detalle en [pilares.md](references/pilares.md).
+3. **Límites de Emi**: nunca clientes ni asuntos, no nombrar a Castorena, sin ataques personales, toda cita legal con fuente oficial verificada, y nunca decir que algo lo hizo una IA (lo construye Emi, con IA). Detalle en [pilares.md](references/pilares.md).
 4. **En política, primero su postura.** Se le pregunta antes de redactar y va en `opinion_emi`.
 5. **Los números se leen del código vivo**, con su fecha. Los pesos multiplican probabilidades predichas, no conteos: nunca decir «esto vale N likes».
 6. **Nada de anzuelos, grupos de likes ni automatización.**

@@ -12,6 +12,7 @@ Valen igual en Claude, ChatGPT, Codex, Gemini o cualquier otra IA, y para person
 - Escribir las llaves de la API de X en un repositorio, un chat, un correo o una variable de entorno: solo viven como secretos del panel.
 - Correr `xviral.py aprobar` o escribir a mano `aprobado_por_emi`, `aprobado_huella` o `reescrito` sin que Emi haya aprobado ese texto.
 - Publicar texto crudo de una IA, o inventar vivencias, opiniones, cifras o citas de Emi.
+- Decir en cualquier pieza que algo lo hizo, armó, escribió o editó una IA (Emi, 13/11/2026). Lo construye Emi, con IA.
 - Mencionar clientes o asuntos de cualquier despacho, ni siquiera anonimizados; nombrar a Castorena Abogados o a sus licenciados; atacar a personas.
 - Afirmar derecho sin fuente oficial verificada.
 - Anzuelos de interacción, grupos de likes, compra de seguidores, seguir y dejar de seguir, o cualquier herramienta que interactúe sola.

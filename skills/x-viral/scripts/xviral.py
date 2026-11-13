@@ -119,6 +119,13 @@ ASUNTOS = [
     r"\b(?:amparo|juicio|toca|asunto|causa)\s+(?:(?:directo|indirecto|laboral|penal|civil|en revisi[oó]n)\s+)?(?:n[uú]m(?:ero|\.)?\s*)?\d+/\d{4}\b",
     r"\ben el despacho\s+(?:llevamos|tenemos|vimos|lleg[oó]|atendimos)\b",
 ]
+# Regla de Emi del 13/11/2026: ninguna pieza dice que la hizo una IA. Él construye con IA; la autoría es suya.
+_IA = r"(?:una\s+|la\s+)?(?:ia|inteligencia artificial|chatgpt|claude|gemini|grok|copilot|un modelo de lenguaje)\b"
+AUTORIA_IA = [
+    r"\b(?:escrit|redactad|generad|cread|hech|armad|editad|producid|disenad|diseñad)[oa]s?\s+(?:por|desde)\s+" + _IA,
+    r"\b(?:lo|la|los|las|me\s+lo|me\s+la|esto|este\s+\w+|esta\s+\w+)?\s*(?:hizo|armó|escribió|generó|creó|editó|redactó|diseñó|produjo)\s+" + _IA,
+    r"\b(?:texto|post|hilo|video|imagen)\s+(?:de|hecho\s+con)\s+(?:una\s+)?ia\b",
+]
 INSULTOS = r"\b(?:idiotas?|imb[eé]cil(?:es)?|pendej[oa]s?|est[uú]pid[oa]s?|tarad[oa]s?|mierdas?)\b"
 INSULTOS_LEVES = r"\b(?:rat(?:a|ero|era)s?|payas[oa]s?|inept[oa]s?|basuras?|delincuentes?|c[ií]nic[oa]s?|vendid[oa]s?)\b"
 PRIMERA_PERSONA = re.compile(r"\b(?:fui|soy|era|estuve|me sent[ií]|me vi|qued[eé] como)\s+(?:un|una|tan|muy|bien)?\s*$")
@@ -507,6 +514,12 @@ def limites(texto: str, excepcion: str) -> tuple[list[str], list[str]]:
     m = buscar(DESPACHO_VETADO, texto)
     if m:
         e.append(f"límite de Emi («{m.group(0)}»): ese despacho no se nombra")
+    for patron in AUTORIA_IA:
+        m = buscar(patron, texto)
+        if m:
+            e.append(f"límite de Emi («{m.group(0).strip()}»): nunca se dice que algo lo hizo una IA; "
+                     "lo construyó Emi, con IA")
+            break
     for patron in ASUNTOS:
         m = buscar(patron, texto)
         if not m:

@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Regla: nunca decir que lo hizo una IA
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026, por medio de la sesión «Matriz de Redes Sociales»: «jamás en nada digas que lo armó una IA». Las herramientas las construyó él, con IA.
+- Cambios: límite nuevo en `pilares.md`, `ia/REGLAS.md` y la regla 3 de la skill; `revisar` da error si un texto atribuye la autoría a una IA («lo escribió una IA», «generado por IA», «texto de IA») y deja pasar «armé una IA que…», «trabajo con IA», «uso IA». Los borradores de la campaña de lanzamiento cumplen.
+- Archivos: `skills/x-viral/{SKILL.md,references/pilares.md,scripts/xviral.py,scripts/test_xviral.py}`, `ia/REGLAS.md` y este registro.
+- Verificación: `python3 ia/verificar.py ci` → aprobado; `xviral.py revisar cuenta/privado/lanzamiento.json` → sin errores.
+- Pendiente: ninguno nuevo.
+
 ## 2026-11-13 · x-viral 1.1.0: publicación por la API oficial, perfil y administración
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 13/11/2026: «usaremos la API»; panel para ver, editar y publicar los posts (o autorizar desde Claude); perfil completo y cómo administrarlo, «sin temor a gastar, pero sin gastar a lo bruto»; usar las herramientas de creador; texto para el formulario de la cuenta de desarrollador. Abrió su cuenta de desarrollador ese día.

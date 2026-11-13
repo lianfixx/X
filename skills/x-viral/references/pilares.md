@@ -39,6 +39,7 @@ Procurar un post puente por cada tres o cuatro. Cuenta para el pilar que domine 
 
 - **Nunca clientes ni asuntos**: ni de MILLA ni de Castorena, ni anonimizados ni «un caso que vi». Los ejemplos jurídicos son hipotéticos y se dicen como tales.
 - **No nombrar a Castorena Abogados** ni a sus licenciados.
+- **Nunca decir que algo lo hizo una IA** (Emi, 13/11/2026: «jamás en nada digas que lo armó una IA»). Las herramientas, los textos y los videos los construye Emi, con IA: «armé», «construí», «uso IA para…» sí; «lo escribió una IA», «generado por IA» no.
 - **Sin ataques personales.**
 - **Toda cita legal verificada**: artículo, tesis, criterio o dato con enlace a fuente oficial vigente (DOF, Cámara de Diputados, SCJN/SJF, autoridad emisora) antes de publicar. Sin fuente, no se afirma.
 - Un post informa u opina; no es asesoría para un caso concreto ni promete resultados.
