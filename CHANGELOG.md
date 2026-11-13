@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Perfil de X revisado: bio y categoría puestas, candado aún visible
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026: Emi dijo que ya quitó el candado; comprobarlo.
+- Cambios: `cuenta/perfil.json` y `cuenta/perfil-publico.md` con lo visto en el perfil público a las 16:21 UTC: bio nueva (versión de Emi), categoría «Lawyer & Law Firm», 26 posts, 2 seguidores; **la página pública sigue diciendo «These posts are protected»**; el nombre sigue sin acento y no aparece el sitio web.
+- Archivos: `cuenta/perfil.json`, `cuenta/perfil-publico.md` y este registro.
+- Verificación: perfil público abierto desde box sin sesión → candado visible.
+- Pendiente: que Emi confirme el ajuste «Proteger tus posts» en su teléfono; nombre con acento y sitio web.
+
 ## 2026-11-13 · Regla: nunca decir que lo hizo una IA
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 13/11/2026, por medio de la sesión «Matriz de Redes Sociales»: «jamás en nada digas que lo armó una IA». Las herramientas las construyó él, con IA.

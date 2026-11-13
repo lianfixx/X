@@ -23,4 +23,4 @@ Por qué así:
 - Sin hashtags ni emojis: no suman en el código y se leen como plantilla.
 - «Gym todos los días» solo si es verdad; si no, cambiarlo por «Gym y disciplina».
 
-Elegida: (pendiente)
+Elegida (vista en el perfil público el 13/11/2026, 16:21 UTC): una versión propia de Emi de la principal: «Abogado en México, uso IA en el trabajo jurídico y te cuento qué sirve y qué no. Política con argumentos, critico a quien corresponda ah y gym todos los días.» Categoría profesional: Lawyer & Law Firm. Pendientes vistos: el nombre sigue sin acento («Garcia») y no aparece el sitio web.

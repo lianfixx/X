@@ -5,18 +5,43 @@
   "creada": "2026-04",
   "creada_nota": "X muestra «Joined April 2026». Emi recuerda cerca de un año; vale lo que muestre X al revisarlo con sesión iniciada",
   "protegida": true,
-  "observado": {"fecha": "2026-11-10", "seguidores": 2, "siguiendo": 42, "posts": 24, "fuente": "perfil público visto desde box, sin sesión"},
+  "observado": {
+    "fecha": "2026-11-13",
+    "hora_utc": "16:21",
+    "seguidores": 2,
+    "siguiendo": 42,
+    "posts": 26,
+    "protegida_visible": true,
+    "bio": "Abogado en México, uso IA en el trabajo jurídico y te cuento qué sirve y qué no. Política con argumentos, critico a quien corresponda ah y gym todos los días.",
+    "categoria": "Lawyer & Law Firm",
+    "nombre_visible": "Emiliano Garcia Milla (sin acento)",
+    "sitio_web_visible": "no aparece",
+    "fuente": "perfil público visto desde box, sin sesión"
+  },
   "premium": false,
   "premium_nota": "Emi piensa contratarlo (10/11/2026); cambiar a true cuando esté activo",
-  "objetivos": ["marca personal", "influencia política", "comunidad de IA + Derecho"],
-  "balance": {"ia-derecho": 0.3334, "lifestyle": 0.3333, "politica": 0.3333},
+  "objetivos": [
+    "marca personal",
+    "influencia política",
+    "comunidad de IA + Derecho"
+  ],
+  "balance": {
+    "ia-derecho": 0.3334,
+    "lifestyle": 0.3333,
+    "politica": 0.3333
+  },
   "tolerancia_balance": 0.15,
   "max_originales_dia": 2,
   "separacion_min_h": 4,
   "video_min_s": 10,
   "modo": "lo aprobado sale por la API oficial de X (decisión del 13/11/2026; conexión pendiente); mientras tanto, entrega para copiar",
-  "api_x": {"cuenta_desarrollador": "abierta el 13/11/2026", "app": "pendiente", "tope_mensual_usd": 10, "recarga_automatica": false},
+  "api_x": {
+    "cuenta_desarrollador": "abierta el 13/11/2026",
+    "app": "pendiente",
+    "tope_mensual_usd": 10,
+    "recarga_automatica": false
+  },
   "sesion_en_box": "bloqueada por X (intentos del 10 y 11/11/2026: «you are not allowed to log in at this time»); no reintentar",
   "inicio_de_publicacion": "2026-11-16",
-  "actualizado": "2026-11-11"
+  "actualizado": "2026-11-13"
 }
