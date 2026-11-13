@@ -4,7 +4,7 @@ Adaptación del plan del video de Santi a una cuenta nueva, con tres pilares y c
 
 ## Punto de partida (visto el 10/11/2026)
 
-`@emilianomilla_` existe desde abril de 2026: 24 posts, 42 seguidos, 2 seguidores y **posts protegidos** (candado). Mientras siga protegida, nada de este plan funciona: solo ven los posts los seguidores aprobados, no se pueden citar ni repostear y el sistema no los recomienda a nadie más.
+`@emilianomilla_` existe desde abril de 2026: 24 posts, 42 seguidos, 2 seguidores y **posts protegidos** (candado). Actualización del 13/11/2026: Emi quitó la protección y puso su bio y la categoría «Lawyer & Law Firm». Mientras una cuenta está protegida, nada de este plan funciona: solo ven los posts los seguidores aprobados, no se pueden citar ni repostear y el sistema no los recomienda a nadie más.
 
 ## Fase 0 · Preparar la cuenta (una vez)
 

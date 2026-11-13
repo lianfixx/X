@@ -27,7 +27,7 @@ Funciona en cualquier IA: [portabilidad.md](references/portabilidad.md). Con ter
 
 ## Estado de la cuenta
 
-Al 10/11/2026 la cuenta está **protegida** y tiene 2 seguidores (`cuenta/perfil.json`). Hasta que Emi quite la protección, los posts no se recomiendan a nadie: ver la fase 0 de [playbook.md](references/playbook.md). Ninguna IA puede ver la cuenta por dentro: lo que no sea público (sus posts mientras tenga candado, métricas, lista de programados) lo trae Emi con capturas o copiando los números. Se puede redactar y planear desde ya.
+Desde el 13/11/2026 la cuenta **ya no está protegida** (comprobado en el perfil público); tiene 2 seguidores (`cuenta/perfil.json`). El estado vigente siempre está en `cuenta/perfil.json`; si `protegida` vuelve a ser `true`, no se publica nada: ver la fase 0 de [playbook.md](references/playbook.md). Ninguna IA puede ver la cuenta por dentro: lo que no sea público (sus posts mientras tenga candado, métricas, lista de programados) lo trae Emi con capturas o copiando los números. Se puede redactar y planear desde ya.
 
 ## Qué leer según el encargo
 

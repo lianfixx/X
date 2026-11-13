@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Cuenta de X abierta
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026: Emi dijo «listo» tras quitar el candado; confirmarlo.
+- Cambios: comprobado en el perfil público a las 16:28 UTC: ya no aparece «These posts are protected» y se ven las pestañas de posts. `cuenta/perfil.json` pasa a `"protegida": false`; la skill y el plan lo reflejan. Siguen pendientes el nombre con acento y el sitio web.
+- Archivos: `cuenta/perfil.json`, `skills/x-viral/SKILL.md`, `skills/x-viral/references/playbook.md` y este registro.
+- Verificación: perfil público abierto desde box sin sesión → sin candado; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: nombre con acento y sitio web en el perfil; aprobación del lanzamiento en el panel.
+
 ## 2026-11-13 · Perfil de X revisado: bio y categoría puestas, candado aún visible
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026: Emi dijo que ya quitó el candado; comprobarlo.
