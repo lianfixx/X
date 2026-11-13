@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · Skills hermanas para LinkedIn, TikTok e Instagram
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: hacer algo como x-viral para LinkedIn, TikTok e Instagram (Reels), cada una en su propia sesión.
+- Cambios: ninguno en la skill. Se abrieron tres sesiones de Claude Code, una por red, con un encargo que usa este repositorio como plantilla de método y estructura, y que traslada lo aprendido aquí (fuente primaria, preguntas juntas, auditoría independiente, nadie inicia sesión en las cuentas de Emi, frontera con Vox Studio). Repositorios previstos: `lianfixx/LinkedIn`, `lianfixx/TikTok` y `lianfixx/Instagram`. No se pudieron crear: la llave de GitHub del box no tiene permiso para crear repositorios; los crea Emi con Muse.
+- Archivos: este registro.
+- Verificación: sesiones creadas (lo confirma la herramienta de sesiones); creación de repositorios por API → rechazada con 403.
+- Pendiente: crear los tres repositorios vacíos.
+
 ## 2026-11-11 · Skill 1.0.3 instalada en Claude
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 11/11/2026, en chat de Claude Code: reporte de Muse sobre la reinstalación de la skill.
