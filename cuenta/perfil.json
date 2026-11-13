@@ -34,12 +34,14 @@
   "max_originales_dia": 2,
   "separacion_min_h": 4,
   "video_min_s": 10,
-  "modo": "lo aprobado sale por la API oficial de X (decisión del 13/11/2026; conexión pendiente); mientras tanto, entrega para copiar",
+  "modo": "lo aprobado sale por la API oficial de X desde el panel de la Matriz de Redes (conectado el 13/11/2026); si falla, entrega para copiar",
   "api_x": {
     "cuenta_desarrollador": "abierta el 13/11/2026",
-    "app": "pendiente",
+    "app": "creada",
     "tope_mensual_usd": 10,
-    "recarga_automatica": false
+    "recarga_automatica": false,
+    "conexion": "OAuth 2.0 (app confidencial) conectada al panel de la Matriz de Redes el 13/11/2026 a las 17:36 UTC",
+    "primera_publicacion": "pendiente"
   },
   "sesion_en_box": "bloqueada por X (intentos del 10 y 11/11/2026: «you are not allowed to log in at this time»); no reintentar",
   "inicio_de_publicacion": "2026-11-16",

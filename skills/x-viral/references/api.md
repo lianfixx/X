@@ -2,7 +2,7 @@
 
 Decisión de Emi del 13/11/2026: «usaremos la API». Los posts que Emi apruebe se publican por la API oficial de X, desde el panel de la Matriz de Redes o desde un chat de Claude. Nadie inicia sesión en la cuenta como persona: la API usa llaves de una app que Emi autoriza.
 
-**Estado:** Emi abrió la cuenta de desarrollador el 13/11/2026. La conexión todavía no está hecha ni probada; hasta entonces sigue valiendo la entrega para copiar de [programacion.md](programacion.md).
+**Estado:** conectada el 13/11/2026 a las 17:36 UTC por OAuth 2.0 (app confidencial), desde el panel de la Matriz de Redes (`https://redes.milla-abogados.workers.dev`, Ajustes → Conectar X). El panel renueva el token solo y, si X no lo renueva, pide reconectar sin gastar. Un primer intento falló por un Client Secret que no coincidía; se resolvió volviendo a guardarlo. Todavía no hay una publicación real: la primera se hace con Emi mirando. Si la API falla, vale la entrega para copiar de [programacion.md](programacion.md).
 
 ## Qué hace y qué no hace la API aquí
 

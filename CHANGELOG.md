@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-13 · API de X conectada al panel
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 13/11/2026: conectar la API de X («hazlo tú»; «tienes permiso tácito de todo»).
+- Cambios: diagnóstico con la bitácora del panel (lectura con la llave de Claude guardada en box): el primer intento de «Conectar X» falló al canjear el código (401, Client Secret que no coincidía). La Matriz de Redes añadió el reintento como app pública; Emi volvió a guardar la app y reconectó. A las 17:36 UTC la bitácora registra «Conectó X (OAuth 2.0, app confidencial)» y «regreso correcto». `cuenta/perfil.json` y `references/api.md` reflejan la conexión.
+- Archivos: `cuenta/perfil.json`, `skills/x-viral/references/api.md` y este registro.
+- Verificación: estado del panel → `x2` (token OAuth 2.0) guardado, `x_app` guardada; publicación real → no ejecutada todavía.
+- Pendiente: créditos y tope de gasto en la consola; aprobar el lanzamiento en el panel y hacer la primera publicación con Emi mirando.
+
 ## 2026-11-13 · Cuenta de X abierta
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: la sesión «Matriz de Redes Sociales», 13/11/2026: Emi dijo «listo» tras quitar el candado; confirmarlo.
