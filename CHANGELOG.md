@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-15 · Emi: «que siempre pida mi aprobación»
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 15/11/2026, en el chat de la Matriz de Redes (informado por esa sesión): «que siempre pida mi aprobación».
+- Cambios: corrige la entrada de abajo. La función del panel que adjuntaba un archivo a una pieza ya aprobada sin pedir aprobación fue retirada por la Matriz de Redes. Ahora una IA solo **propone** el archivo (`POST /api/claude/pieza/<id>/propuesta`) y Emi lo acepta en el panel con «Agregar y aprobar». Sigue permitido mover la hora de una pieza aprobada sin tocar texto ni archivos. En esta skill no cambia nada: la regla 1 ya exige la aprobación de Emi para cada post.
+- Archivos: este registro.
+- Verificación: mensaje de la Matriz de Redes del 15/11/2026 y su documentación en `lianfixx/REDES` (`skills/matriz-redes/references/panel.md`, `AGENTS.md`).
+- Pendiente: ninguno.
+
 ## 2026-11-15 · Primer post por la API: DOF con video, y auditoría del camino de video
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 14/11/2026: adelantar el post del DOF al domingo; «HAZLO TÚ, TODO TIENE QUE ESTAR AUTOMATIZADO»; «TÚ YA TIENES EL VIDEO EN DRIVE, Hazlo y audita a fondo».
