@@ -1,20 +1,20 @@
 {
   "handle": "emilianomilla_",
   "espacio_vox": "personal",
-  "estado": "cuenta abierta (sin candado desde el 13/11/2026), casi sin uso",
+  "estado": "cuenta abierta; primer post por API el 15/11/2026",
   "creada": "2026-04",
   "creada_nota": "X muestra «Joined April 2026». Emi recuerda cerca de un año; vale lo que muestre X al revisarlo con sesión iniciada",
   "protegida": false,
   "observado": {
-    "fecha": "2026-11-13",
-    "hora_utc": "16:28",
+    "fecha": "2026-11-15",
+    "hora_utc": "21:03",
     "seguidores": 2,
     "siguiendo": 42,
     "posts": 26,
     "protegida_visible": false,
     "bio": "Abogado en México, uso IA en el trabajo jurídico y te cuento qué sirve y qué no. Política con argumentos, critico a quien corresponda ah y gym todos los días.",
     "categoria": "Lawyer & Law Firm",
-    "nombre_visible": "Emiliano Garcia Milla (sin acento)",
+    "nombre_visible": "Emiliano García Milla (ya con acento)",
     "sitio_web_visible": "no aparece",
     "fuente": "perfil público visto desde box, sin sesión"
   },
@@ -41,9 +41,9 @@
     "tope_mensual_usd": 10,
     "recarga_automatica": false,
     "conexion": "OAuth 2.0 (app confidencial) conectada al panel de la Matriz de Redes el 13/11/2026 a las 17:36 UTC",
-    "primera_publicacion": "pendiente"
+    "primera_publicacion": "2026-11-15 10:30 (hora de México): post del DOF con video, publicado solo por el panel; https://x.com/emilianomilla_/status/2122004433412161742"
   },
   "sesion_en_box": "bloqueada por X (intentos del 10 y 11/11/2026: «you are not allowed to log in at this time»); no reintentar",
   "inicio_de_publicacion": "2026-11-16",
-  "actualizado": "2026-11-13"
+  "actualizado": "2026-11-15"
 }

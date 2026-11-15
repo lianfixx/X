@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-15 · Primer post por la API: DOF con video, y auditoría del camino de video
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 14/11/2026: adelantar el post del DOF al domingo; «HAZLO TÚ, TODO TIENE QUE ESTAR AUTOMATIZADO»; «TÚ YA TIENES EL VIDEO EN DRIVE, Hazlo y audita a fondo».
+- Cambios: (1) El video del DOF (`castorena-pagos-digitales-v5.mp4` en Drive y en la computadora en la nube de Emi; 56 s, 1080×1920, H.264/AAC, 39 MB) se subió al panel; Emi lo adjuntó a la pieza y la aprobó el 14/11 a las 23:24. (2) Revisión del video: texto en pantalla leído por OCR en 28 cuadros, sin el nombre del despacho; el audio no se revisó. (3) En `lianfixx/REDES` (panel), por pedido de Emi: adjuntar a una pieza aprobada el archivo que le faltaba; prueba de conexión con X; subida adelantada de archivos; y una corrección: una caída pasajera de X al renovar el permiso ya no borra la conexión. El código de subida se cotejó con la guía oficial de X. (4) Prueba real el 15/11 a las 05:30 UTC: X respondió como `@emilianomilla_` y el video quedó subido y procesado once horas antes. (5) El panel publicó el post a las 10:30 (hora de México) con el video. Anotado en `cuenta/publicados.jsonl`.
+- Archivos: `cuenta/{publicados.jsonl,perfil.json}`, `skills/x-viral/references/api.md` y este registro. En `lianfixx/REDES`: `worker/{index.js,prueba.mjs}`, su documentación y su registro.
+- Verificación: bitácora del panel → «Publicado en x» a las 16:30:56 UTC; post abierto sin sesión desde la computadora en la nube → visible, con el texto aprobado y el video; `python3 ia/verificar.py ci` → aprobado en los dos repositorios (31 pruebas del Worker).
+- Pendiente: métricas a las 48 horas (el panel las lee solo); lanzamiento A el martes 17/11 a las 9:00; que Emi responda a quien comente.
+
 ## 2026-11-13 · API de X conectada al panel
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 13/11/2026: conectar la API de X («hazlo tú»; «tienes permiso tácito de todo»).
