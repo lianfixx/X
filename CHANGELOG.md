@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-16 · Revisión semanal del algoritmo: commit 30647a8 de X
+- Agente: Claude Code (tarea programada en la nube)
+- Solicitud: tarea semanal de Emi (autorizada el 10/11/2026): revisar si cambió el algoritmo de X y mantener al día la skill.
+- Cambios: X publicó `30647a8` (14/11/2026; `param.rs` sincronizado el 13/11). `pesos comparar` encontró 24 cambios. Lo que importa para la cuenta: (1) **copiar el enlace** bajó de 20 a 0 en home-mixer; vm-ranker conserva 20 por defecto y el valor real no está publicado, así que deja de contarse como la señal más fuerte. (2) Grox suma **pedir que compartan el post** (`SpamPromotesShares`) a las categorías de spam sin exención; pedir clics o respuestas recibe etiquetas propias sin efecto publicado. (3) Selección por diversidad: nuevo modo de ventana con el historial del lector, apagado por defecto. (4) Nuevo índice `ai_video_model` para video inmersivo marcado como generado por IA. (5) Filtros del carrusel de video encendidos; fuente de historial barajado retirada (estaba apagada). Reglas de visibilidad (40 + 26), filtros de Para ti, deduplicación y README sin cambios de fondo. Se actualizaron `algoritmo.md` (pesos, líneas citadas, DPP, índices, Grox), el resumen de `SKILL.md` (1.2.0, `algoritmo_commit` 30647a8), `redaccion.md`, `playbook.md` y `video-santi.md`; el validador avisa cuando un post pide compartir y su mensaje de anzuelo ya no sugiere «invita a compartir». La prueba que suponía copiar enlace > like ahora compara mensaje y respuesta contra like.
+- Archivos: `skills/x-viral/{SKILL.md,data/pesos.json,references/{algoritmo,redaccion,playbook,video-santi}.md,scripts/{xviral,test_xviral}.py}` y este registro.
+- Verificación: diff `660cd74..30647a8` leído en `home-mixer/params/param.rs`, `vm-ranker/params.rs`, `vm-ranker/dpp.rs`, `vm-ranker/scoring/dpp_model.rs`, `visibility-filtering/rules/levels.rs`, `home-mixer/candidate_pipeline/phoenix_candidate_pipeline.rs`, `home-mixer/filters/{oon_retweet_reply_filter,retweet_deduplication_filter}.rs`, `phoenixRankAllCandidateProcessor.strato` y `grox/flows/ptos/task_write_safety_post_annotations_result_sink.py`; README sin «Notable Updates» nuevas; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi revise y fusione el pull request. Los posts ya aprobados no piden compartir.
+
 ## 2026-11-15 · Emi: «que siempre pida mi aprobación»
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 15/11/2026, en el chat de la Matriz de Redes (informado por esa sesión): «que siempre pida mi aprobación».

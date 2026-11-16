@@ -53,7 +53,7 @@ Adaptación del plan del video de Santi a una cuenta nueva, con tres pilares y c
 | Qué | Por qué |
 |---|---|
 | Publicar el texto de una IA sin reescribir | Señal `llm_slop_user`: etiqueta de cuenta 7 días, todos los posts fuera de las recomendaciones a no seguidores. Qué la dispara no está publicado; el nombre apunta a texto de IA. |
-| Anzuelos («RT y te mando», «comenta X») | Spam sin exención por tamaño. |
+| Anzuelos («RT y te mando», «comenta X») y pedir que compartan el post («compártelo», «reenvíalo») | Spam sin exención por tamaño. Pedir compartir entró como categoría propia el 14/11/2026 (`SpamPromotesShares`). |
 | Grupos de likes, bots, seguir y dejar de seguir, acciones automatizadas | Modelo de secuencias de automatización. |
 | Provocar reportes, que lo silencien o «no me interesa» | Son los pesos más negativos y entrenan al sistema a no traer contenido parecido. |
 | Repetir el mismo texto | Etiqueta de texto duplicado. |

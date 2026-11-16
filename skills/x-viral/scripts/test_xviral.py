@@ -137,7 +137,8 @@ class Borrador(unittest.TestCase):
         self.assertTrue(0 < idx <= 100)
 
     def test_indice_sigue_a_los_pesos(self):
-        self.assertGreater(x.indice({"copiar_link": 3}, PESOS), x.indice({"like": 3}, PESOS))
+        self.assertGreater(x.indice({"dm": 3}, PESOS), x.indice({"like": 3}, PESOS))
+        self.assertGreater(x.indice({"reply": 3}, PESOS), x.indice({"like": 3}, PESOS))
         self.assertEqual(x.indice({s: 3 for s in x.SENALES}, PESOS), 100)
         self.assertEqual(x.indice({}, PESOS), 0)
 
@@ -165,6 +166,17 @@ class Borrador(unittest.TestCase):
                       "Retuitea si estás harto.", "Regálame un RT.", "Denme follow y les sigo de vuelta.",
                       "Sígueme y te sigo."):
             self.assertTrue(any("anzuelo" in m for m in errores(texto)), texto)
+
+    def test_pedir_compartir_avisa(self):
+        for texto in ("Compártelo con quien esté por rentar.", "Reenvíalo a tu grupo de la oficina.",
+                      "Copia el enlace y mándalo."):
+            e, w, _ = rev(base(texto=texto))
+            self.assertTrue(any("pide compartir" in m for m in w), texto)
+            self.assertFalse(any("pide compartir" in m for m in e), texto)
+        for texto in ("Nadie comparte un post que no le sirve.",
+                      "Si conoces a alguien que renta, esto le sirve. ¿Tú qué cláusula revisarías primero?"):
+            _, w, _ = rev(base(texto=texto))
+            self.assertFalse(any("pide compartir" in m for m in w), texto)
 
     def test_frases_normales_no_son_anzuelo(self):
         for texto in ("Mi mamá me da like en todo y con eso soy feliz.",
