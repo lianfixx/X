@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-16 · Borradores sin dos puntos (preferencia de Emi)
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: seguimiento de la tarea programada del 16/11/2026. La sesión de LinkedIn informó una preferencia de Emi: los dos puntos «suenan muy IA, lo quiero fluido».
+- Cambios: los dos borradores de X de esta semana se reescribieron sin dos puntos, en el archivo local y en el panel (siguen como «lista para aprobar»; solo se editan borradores que dejó Claude). La lección quedó en `cuenta/aprendizajes.md` y en `cuenta/voz.md`, marcada como dicha para LinkedIn y por confirmar para X. La sesión de LinkedIn confirmó además el texto literal de los artículos 13, 15 y 16 y que la postura usada en el borrador del jueves la reescribió Emi el 13/11.
+- Archivos: `cuenta/aprendizajes.md`, `cuenta/voz.md` y este registro.
+- Verificación: `python3 skills/x-viral/scripts/xviral.py semana` → sin errores; revisión del panel → sin errores, 280 y 278 caracteres; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: los de la entrada de abajo.
+
 ## 2026-11-16 · Arranque de la primera semana en X
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: tarea programada de Emi para el lunes 16/11/2026 («Arranque de la primera semana en X»).

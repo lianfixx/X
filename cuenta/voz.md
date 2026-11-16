@@ -18,4 +18,4 @@
 
 ## Correcciones de Emi
 
-(vacío: añadir aquí cada corrección con fecha y el antes y después)
+- 2026-11-16 · Preferencia que Emi dio para LinkedIn (informada por esa sesión; todavía no la ha dicho sobre X): los dos puntos «suenan muy IA, lo quiero fluido». Antes: «Mi condición es una: si me obligan…». Después: «Pongo una condición. Si me obligan…». Se aplica a X hasta que él diga otra cosa.

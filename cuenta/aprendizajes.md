@@ -3,3 +3,4 @@
 Se lee antes de redactar y se amplía después de cada publicación y de cada comentario de Emi (`xviral.py aprender "..."`). Cada línea: fecha, qué pasó o qué dijo Emi, y la regla que queda. No se borran lecciones; si una cambia, se añade la nueva debajo.
 
 - 2026-11-10 · Emi fijó el punto de partida: tres pilares a partes iguales; política como analista jurídico con postura, crítico independiente; programar solo con su aprobación; nunca clientes ni asuntos, no nombrar a Castorena, sin ataques personales y toda cita legal verificada.
+- 2026-11-16 · Emi (informado por la sesión de LinkedIn el 16/11/2026, sobre sus textos de LinkedIn): los dos puntos «suenan muy IA, lo quiero fluido»; quiere textos que no aburran, polémicos, con algo de humor pero serios y creíbles. Regla para X, por confirmar con sus correcciones: redactar sin dos puntos, con frases corridas; y no repetir en X una frase suya que ya salió tal cual en otra red.
