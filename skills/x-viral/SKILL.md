@@ -3,10 +3,10 @@ name: x-viral
 description: "Planear, redactar, revisar, publicar con aprobación (API oficial) y medir las publicaciones de Emi en X (@emilianomilla_) según el código público del algoritmo de X: estilo de vida y gym, IA + Derecho en México y opinión política, a partes iguales. Usar al pedir un post, tuit, hilo, cita, calendario o semana de contenido para X o Twitter, al revisar un borrador, al preguntar qué premia o castiga el algoritmo de X, al auditar la cuenta o sus métricas, al revisar si cambió el algoritmo, o al publicar en X un video de Vox Studio. No usar para producir videos (eso es vox-studio), ni para mensajes de WhatsApp o correo (estilo-emi), ni para otras redes."
 license: Uso personal de Emiliano García Milla. Sin licencia de reutilización para terceros.
 metadata:
-  version: "1.1.0"
-  release_date: "2026-11-10"
+  version: "1.2.0"
+  release_date: "2026-11-16"
   language: "es-MX"
-  algoritmo_commit: "660cd74"
+  algoritmo_commit: "30647a8"
 ---
 
 # x-viral
@@ -59,15 +59,15 @@ Para una semana: lo mismo con `xviral semana ARCHIVO`, que además valida cadenc
 
 ## Lo esencial del algoritmo
 
-Resumen de [algoritmo.md](references/algoritmo.md), verificado el 10/11/2026:
+Resumen de [algoritmo.md](references/algoritmo.md), verificado el 10/11/2026 y actualizado el 16/11/2026 (commit `30647a8`):
 
-- Para cada lector, X suma peso × probabilidad predicha de cada acción. Lo que más pesa: copiar el enlace (20), responder, mandar por mensaje y citar (5), seguir al autor (4). El like pesa menos de 1. Lo negativo pesa mucho más: reportar (−234), silenciar (−58.8), «no me interesa» (−53), bloquear (−31).
+- Para cada lector, X suma peso × probabilidad predicha de cada acción. Lo que más pesa y es seguro: responder, mandar por mensaje y citar (5), seguir al autor (4). Copiar el enlace pesaba 20; desde el 14/11/2026 home-mixer lo tiene en 0 y vm-ranker en 20, así que no se cuenta con él. El like pesa menos de 1. Lo negativo pesa mucho más: reportar (−234), silenciar (−58.8), «no me interesa» (−53), bloquear (−31).
 - Solo cuentan las acciones sobre posts vistos en Inicio. Mandar el enlace a un grupo para que den like no sirve.
 - Post original siempre. Respuestas y reposts casi no se recomiendan; la cita sí viaja.
 - El segundo post del día en un mismo feed vale ×0.625. Uno o dos al día, separados.
 - Ventanas: 2 horas para el empujón de arranque, 24 para los índices de descubrimiento, 48 como máximo en Para ti.
 - Seguirse mutuamente con quien conversa sube de 5 a 20 el peso de que esa persona responda.
-- Hay etiquetas de cuenta y de post (texto de IA, anzuelos, respuestas en ráfaga, dominios dudosos) que sacan los posts de las recomendaciones a quienes no siguen a Emi, sin que sus seguidores lo noten.
+- Hay etiquetas de cuenta y de post (texto de IA, anzuelos, pedir que compartan el post, respuestas en ráfaga, dominios dudosos) que sacan los posts de las recomendaciones a quienes no siguen a Emi, sin que sus seguidores lo noten.
 - No hay castigo por enlaces ni por hashtags, ni hora dorada, ni ventaja por Premium en el ranking.
 
 ## Mantener al día

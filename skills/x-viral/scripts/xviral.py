@@ -100,6 +100,12 @@ ANZUELOS = [
     r"\b(?:denme|dame)\s+follow\b|\bfollow\s*(?:x|por)\s*follow\b",
 ]
 _ANZUELOS_MAYUS = {2}  # este patrón distingue mayúsculas (la palabra clave gritada)
+# Pedir directamente que compartan o reenvíen el post. Grox lo clasifica como SpamPromotesShares
+# (grox/flows/ptos/task_write_safety_post_annotations_result_sink.py:233-242). Qué cuenta exactamente
+# no está publicado, así que es aviso, no error.
+PIDE_COMPARTIR = (r"(?:^|[.!?¿¡\n]\s*)(?:comp[aá]rte(?:lo|la|los|las)?|compartan(?:lo|la|los|las)?|"
+                  r"reenv[ií]a(?:lo|la)?|reenv[ií]en(?:lo|la)?|m[aá]nda(?:lo|la|selo|sela)|m[aá]ndenlo|"
+                  r"copia\s+(?:el\s+)?(?:enlace|link))\b")
 # Frases que delatan texto de IA sin reescribir. Avisos, no errores: decide Emi.
 PLANTILLA_IA = [
     r"\ben el mundo actual\b", r"\ben la era (digital|de la)\b", r"\bes importante destacar\b",
@@ -572,7 +578,11 @@ def revisar(b, pesos: dict, historial: list[dict], cfg: dict, para: str = "") ->
         m = buscar(patron, texto, distingue=i in _ANZUELOS_MAYUS)
         if m:
             e.append(f"anzuelo de interacción («{m.group(0).strip()}»): es spam sin exención en el código; "
-                     "mejor invita a compartir o a conversar")
+                     "mejor di para quién es el post y deja que el lector decida")
+    m = buscar(PIDE_COMPARTIR, texto)
+    if m:
+        w.append(f"pide compartir («{m.group(0).strip()}»): Grox etiqueta como spam sin exención los posts que "
+                 "promueven compartir (SpamPromotesShares, desde el commit 30647a8); di para quién es el post")
     excepcion = b.get("excepcion_limite", "")
     excepcion = excepcion.strip() if isinstance(excepcion, str) else ""
     le, lw = limites(texto, excepcion)

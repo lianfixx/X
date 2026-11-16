@@ -11,7 +11,7 @@
 
 El código suma, para cada lector, el peso de cada acción por la probabilidad de que ese lector la haga. Las acciones que más pesan son las de mandar el post a otra persona y conversar. Antes de dar por bueno un borrador:
 
-- ¿Alguien copiaría el enlace o lo mandaría por mensaje a una persona concreta? ¿A quién y por qué?
+- ¿Alguien lo mandaría por mensaje a una persona concreta? ¿A quién y por qué? (Copiar el enlace ya no se cuenta como señal fuerte: desde el 14/11/2026 home-mixer le da peso 0; ver [algoritmo.md](algoritmo.md).)
 - ¿Alguien respondería algo que no sea «de acuerdo»?
 - ¿Alguien que no conoce a Emi lo seguiría por esto?
 - ¿A alguien le daría motivos para silenciarlo, marcar «no me interesa», bloquear o reportar?
@@ -36,7 +36,7 @@ Lo que el texto debe cumplir:
 
 ## Pedir la acción sin anzuelo
 
-El anzuelo de interacción («RT y te mando…», «comenta X y te paso…», «like si…», «etiqueta a…») está entre las categorías de spam sin exención por tamaño de cuenta. No se usa nunca.
+El anzuelo de interacción («RT y te mando…», «comenta X y te paso…», «like si…», «etiqueta a…») está entre las categorías de spam sin exención por tamaño de cuenta. Desde el 14/11/2026 también lo está **pedir que compartan el post** («compártelo», «reenvíalo», «copia el enlace»): Grox lo clasifica como `SpamPromotesShares`. Pedir clics o respuestas tiene ahora su propia etiqueta, de efecto no publicado. No se usa nunca; el validador avisa cuando un post pide compartir.
 
 Sí vale decir para quién es el post y dejar que el lector decida: «Si conoces a alguien que está por firmar un contrato de renta, esto le sirve». Sí vale invitar al mensaje directo cuando hay algo real que conversar. No se promete un regalo a cambio de una acción.
 
