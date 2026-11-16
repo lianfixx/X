@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-16 · Arranque de la primera semana en X
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: tarea programada de Emi para el lunes 16/11/2026 («Arranque de la primera semana en X»).
+- Cambios: (1) Perfil público visto sin sesión: 28 posts, 42 seguidos, 2 seguidores, bio y categoría puestas, sin sitio web; anotado en `cuenta/perfil.json`. (2) Panel: el post del DOF sigue publicado; el lanzamiento A fue aprobado otra vez por Emi el 16/11 a las 02:07 UTC, ya con la imagen del mapa que propuso la Matriz de Redes, y queda programado para el martes 17 a las 9:00. La subida adelantada de la imagen vence antes de esa hora; el código del panel la repite solo (`porVencer` en `worker/index.js`). (3) La Matriz de Redes confirmó que no tiene material real de Emi para estilo de vida ni postura política dictada por él. (4) Semana armada y validada con `xviral.py semana` (archivo local, sin subir): lanzamiento del martes, política del jueves sobre la Ley de Economía Digital para Pagos Digitales y Electrónicos y IA + Derecho del viernes. Los dos borradores nuevos quedaron en el panel como «lista para aprobar», con hora sugerida y motivo. (5) La ley se leyó en el DOF del 04/11/2026 (artículos 13, 15 y 16 y transitorios primero y tercero) antes de redactar. (6) Estilo de vida (miércoles y sábado) y política del domingo no se redactan hasta que Emi dé material: se pidió en una sola tanda por la Matriz de Redes.
+- Archivos: `cuenta/perfil.json` y este registro.
+- Verificación: `python3 skills/x-viral/scripts/xviral.py semana` → sin errores (ia-derecho 2, lifestyle 0, politica 1); revisión del panel → sin errores, 280 y 278 caracteres; DOF → <https://dof.gob.mx/nota_detalle.php?codigo=5803017&fecha=04/11/2026>; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi reescriba y apruebe los dos borradores; material de Emi para estilo de vida y política; comprobar el martes 9:10 que salió el lanzamiento; métricas del DOF a las 48 horas; antes del jueves, revisar si Hacienda ya publicó los sectores del artículo 13.
+
 ## 2026-11-15 · Emi: «que siempre pida mi aprobación»
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 15/11/2026, en el chat de la Matriz de Redes (informado por esa sesión): «que siempre pida mi aprobación».
