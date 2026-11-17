@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-17 · Lanzamiento publicado por la API
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: tarea programada de Emi para el martes 17/11/2026 («Revisar primera publicación por API en X»).
+- Cambios: el panel de la Matriz de Redes publicó el post de lanzamiento (opción A, con la imagen del mapa) a las 9:00 (hora de México): <https://x.com/emilianomilla_/status/2122706559125901364>. La imagen, cuya subida adelantada había vencido, la volvió a subir el panel sin intervención. Anotado en `cuenta/publicados.jsonl`.
+- Archivos: `cuenta/publicados.jsonl` y este registro.
+- Verificación: bitácora del panel → «Publicado en x» a las 15:00:56 UTC; post abierto sin sesión → visible, con el texto aprobado; datos públicos del post → una foto adjunta; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi responda a quien comente en las dos primeras horas; métricas a las 48 horas; aprobar los borradores del jueves y del viernes; material para estilo de vida.
+
 ## 2026-11-16 · Borradores sin dos puntos (preferencia de Emi)
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: seguimiento de la tarea programada del 16/11/2026. La sesión de LinkedIn informó una preferencia de Emi: los dos puntos «suenan muy IA, lo quiero fluido».
