@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-18 · The Economist, segunda ronda: Emi rechazó las primeras opciones
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 18/11/2026, en este chat: «Está horrible, busca algo más crítico, interesante (busca teorías) opina, analiza, razona, natural, humano, controversial».
+- Cambios: se miró la portada y lo que publicaron los medios sobre las teorías que desató; las dos piezas del panel se reescribieron y se añadió una tercera, con tres ángulos distintos (las teorías, el robot y el cerebro, pronosticar sin responder). Siguen como «lista para aprobar»; solo sale una. Lección anotada en `cuenta/aprendizajes.md`.
+- Archivos: `cuenta/aprendizajes.md` y este registro.
+- Verificación: `xviral.py revisar` → sin errores; revisión del panel → sin errores; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi elija, reescriba y apruebe una, y cancele las otras.
+
 ## 2026-11-18 · Post sobre la portada 2027 de The Economist (dos opciones)
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 18/11/2026, en el chat de la Matriz de Redes (transmitido por esa sesión): un post de X sobre el tuit de @TheEconomist de «The World Ahead 2027», polémico, natural y humano.
