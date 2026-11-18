@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-18 · Post sobre la portada 2027 de The Economist (dos opciones)
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 18/11/2026, en el chat de la Matriz de Redes (transmitido por esa sesión): un post de X sobre el tuit de @TheEconomist de «The World Ahead 2027», polémico, natural y humano.
+- Cambios: dos opciones de pilar ia-derecho en el panel, «lista para aprobar», para el miércoles 18 a las 9:00 (solo sale una). A cita el tuit (lleva enlace, 0.20 USD); B es solo texto. Ángulo de la Matriz: en el derecho mexicano el rechazo a la IA llegó antes que el uso, y el riesgo es firmar sin verificar. Sin despachos, clientes ni autoría de IA.
+- Archivos: este registro (los borradores quedan en `cuenta/privado/`, que no se sube).
+- Verificación: tuit leído en los datos públicos de X (texto, 17/11/2026 00:35 UTC, 64,006 me gusta, 3,096 respuestas al 18/11) y portada leída por OCR («Artificial intelligence: Acceleration, risks and backlash»); el artículo de pago no se leyó y no se cita. `xviral.py revisar` → sin errores; revisión del panel → sin errores (275 y 278 caracteres); `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi reescriba y apruebe una y cancele la otra antes de las 9:00.
+
 ## 2026-11-17 · Lanzamiento publicado por la API
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: tarea programada de Emi para el martes 17/11/2026 («Revisar primera publicación por API en X»).
