@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-18 · Textos para los dos videos de The Economist
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 18/11/2026, en el chat de la Matriz de Redes (transmitido por esa sesión): los dos videos de Vox Studio sobre la portada salen el sábado 21 y el domingo 22.
+- Cambios: dos piezas de X en el panel, «lista para aprobar», a las 10:00 de cada día, con la postura que Emi dictó. El video de cada una se propondrá cuando esté en el panel; Emi lo acepta.
+- Archivos: este registro.
+- Verificación: `xviral.py revisar` → sin errores (avisa de la fórmula «no es…, es…», que son palabras literales de Emi); revisión del panel → sin errores; `python3 ia/verificar.py ci` → aprobado. Los videos no se han visto.
+- Pendiente: ids de los videos, propuesta de archivos y aprobación de Emi.
+
 ## 2026-11-18 · Seguimiento del miércoles: métricas del DOF a las 48 horas
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: tarea programada del 18/11/2026 («X: métricas y material de la semana») y pedido de Emi de la noche anterior («Cancela tú», sobre las tres opciones cortas de The Economist).
