@@ -18,8 +18,8 @@
     "sitio_web_visible": "no aparece",
     "fuente": "perfil público visto desde box, sin sesión"
   },
-  "premium": false,
-  "premium_nota": "Emi piensa contratarlo (10/11/2026); cambiar a true cuando esté activo",
+  "premium": true,
+  "premium_nota": "Emi activó la prueba gratis de 7 días el 18/11/2026 (vence hacia el 25/11); si no la conserva, volver a false",
   "objetivos": [
     "marca personal",
     "influencia política",
@@ -45,5 +45,5 @@
   },
   "sesion_en_box": "bloqueada por X (intentos del 10 y 11/11/2026: «you are not allowed to log in at this time»); no reintentar",
   "inicio_de_publicacion": "2026-11-16",
-  "actualizado": "2026-11-16"
+  "actualizado": "2026-11-18"
 }
