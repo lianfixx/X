@@ -8,7 +8,8 @@ Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 - Cambios: `cuenta/perfil.json` pasa a `"premium": true` con la nota de que es la prueba gratis de 7 días (vence hacia el 25/11/2026). El texto largo (2,462 caracteres) quedó redactado y validado en local. Se pidió a la Matriz de Redes que el panel acepte textos largos en X, porque hoy corta en 280.
 - Archivos: `cuenta/perfil.json` y este registro.
 - Verificación: `xviral.py revisar` del texto largo → sin errores ni avisos; `python3 ia/verificar.py ci` → aprobado. No se ha probado publicar un post largo por la API.
-- Pendiente: respuesta de la Matriz; que Emi reescriba y apruebe; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
+- Seguimiento (mismo día): la Matriz de Redes desplegó el cambio (el panel acepta hasta 25,000 caracteres en X hasta el 25/11/2026) y el texto quedó en el panel como «lista para aprobar» para el miércoles 18 a las 8:30.
+- Pendiente: que Emi reescriba y apruebe, y cancele las tres opciones cortas; revisar hacia el 25/11 si conserva Premium y, si no, volver a `false`.
 
 ## 2026-11-18 · The Economist, segunda ronda: Emi rechazó las primeras opciones
 - Agente: Claude Code (sesión en la nube)
