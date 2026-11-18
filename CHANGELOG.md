@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-18 · Seguimiento del miércoles: métricas del DOF a las 48 horas
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: tarea programada del 18/11/2026 («X: métricas y material de la semana») y pedido de Emi de la noche anterior («Cancela tú», sobre las tres opciones cortas de The Economist).
+- Cambios: (1) Métricas del post del DOF a las 48 horas, leídas por el panel con la API de X: 4 vistas, 0 me gusta, 0 respuestas; anotadas en `cuenta/publicados.jsonl`. (2) El lanzamiento del martes lleva 2 me gusta y 0 respuestas a las 24 horas (dato público). (3) Las tres opciones cortas de The Economist fueron retiradas por la Matriz de Redes a pedido de Emi. (4) El texto largo no fue aprobado antes de las 8:30; se movió su hora propuesta a las 19:30 (borrador sin aprobar). (5) Sin material de Emi para estilo de vida; las piezas del jueves y viernes siguen sin aprobar. (6) En los índices del DOF del 17 y 18/11 no aparece la determinación de Hacienda del artículo 13 (búsqueda por título, no exhaustiva).
+- Archivos: `cuenta/publicados.jsonl` y este registro.
+- Verificación: estado del panel leído con la llave de Claude; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: aprobaciones de Emi; material de estilo de vida; métricas del lanzamiento a las 48 horas.
+
 ## 2026-11-18 · Premium en prueba y texto largo sobre The Economist
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 18/11/2026, en este chat: pidió un texto profundo y periodístico sobre la portada 2027 de The Economist y después avisó: «Ya, tenemos 7 días de Premium».
