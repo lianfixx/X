@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-18 · Hilos en los mejores posts y guía descargable
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 18/11/2026, en este chat: hilos de 1 a 5 respuestas solo en los posts perfectos; para el post del cerebro, una guía hecha en Claude Design para descargar e invitación a su TikTok. Eligió entregar la guía con enlace directo (no «comenta para obtenerla»), alojarla en Google Drive y usar el TikTok @emiliano_milla_.
+- Cambios: guía de una página «Antes de firmar lo que te dio una IA» (siete revisiones, lo que sí y no se deja a la IA), diseñada en un lienzo de Claude Design y exportada a PDF carta; subida al Drive de Emi (privada hasta que él la comparta). Dos respuestas redactadas para el video del domingo 22 y pedido a la Matriz de Redes de que el panel publique respuestas encadenadas. Lección en `cuenta/aprendizajes.md`.
+- Archivos: `cuenta/aprendizajes.md` y este registro.
+- Verificación: PDF de una página revisado en imagen; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi revise la guía, la comparta con «Cualquier persona con el enlace» y apruebe las respuestas; soporte de hilos en el panel.
+
 ## 2026-11-18 · Textos para los dos videos de The Economist
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 18/11/2026, en el chat de la Matriz de Redes (transmitido por esa sesión): los dos videos de Vox Studio sobre la portada salen el sábado 21 y el domingo 22.
