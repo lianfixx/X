@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-19 · Texto largo publicado y semana aprobada
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: seguimiento de la semana en X.
+- Cambios: el texto largo sobre la portada 2027 de The Economist salió por el panel el 18/11 a las 11:49 (hora de México): <https://x.com/emilianomilla_/status/2123111444216439283>; anotado en `cuenta/publicados.jsonl` (el texto final pudo cambiar con la reescritura de Emi). Emi aprobó y quedaron programados pagos digitales (jueves 19), boletines (viernes 20) y los dos videos de The Economist (sábado 21 y domingo 22). El hilo de la guía no se añadió al video del domingo porque ya estaba aprobado: Emi lo agrega y reaprueba, o lo publica desde la app. El PDF de la guía sigue privado en Drive.
+- Archivos: `cuenta/publicados.jsonl` y este registro.
+- Verificación: estado del panel; enlace de Drive sin sesión → pide iniciar sesión; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: compartir el PDF; hilo del domingo; métricas a 48 horas.
+
 ## 2026-11-18 · Hilos en los mejores posts y guía descargable
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 18/11/2026, en este chat: hilos de 1 a 5 respuestas solo en los posts perfectos; para el post del cerebro, una guía hecha en Claude Design para descargar e invitación a su TikTok. Eligió entregar la guía con enlace directo (no «comenta para obtenerla»), alojarla en Google Drive y usar el TikTok @emiliano_milla_.
