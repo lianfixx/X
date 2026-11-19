@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-19 · Hilo de la guía en el post del mapa
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 19/11/2026, en este chat: la guía y los hilos eran para el post ya publicado sobre la Matriz (17/11) y para futuras publicaciones.
+- Cambios: pieza nueva en el panel que responde al post del mapa con la guía y, debajo, la invitación a TikTok (sin aprobar; hoy 19:30). El video del domingo queda sin hilo. Lección anotada; la confusión vino de entender «el del cerebro» como el video del domingo.
+- Archivos: `cuenta/aprendizajes.md` y este registro.
+- Verificación: revisión del panel → sin errores; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: que Emi comparta el PDF y apruebe la pieza.
+
 ## 2026-11-19 · Texto largo publicado y semana aprobada
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: seguimiento de la semana en X.
