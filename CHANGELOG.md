@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-23 · Meme de la consulta de expedientes
+- Agente: Claude Code (sesión en la nube)
+- Solicitud: Emi, 23/11/2026, por la Matriz de Redes: «un meme perfecto para publicar en X»; eligió en este chat el concepto «el acuerdo».
+- Cambios: imagen original 1080×1350 con formato de acuerdo judicial («se tiene por NO CARGADA la página… Así lo acordó y firma el Servidor 502»), sin usar el meme de otra cuenta ni afirmar que cerraron la consulta. Pieza en el panel para el martes 24 a las 9:00, sin enlace; la Matriz subió la imagen desde el Drive de Emi y la propuso.
+- Archivos: este registro.
+- Verificación: `xviral.py revisar` → sin errores; revisión del panel → sin errores; `python3 ia/verificar.py ci` → aprobado.
+- Pendiente: «Agregar y aprobar» de Emi.
+
 ## 2026-11-19 · Hilo de la guía en el post del mapa
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 19/11/2026, en este chat: la guía y los hilos eran para el post ya publicado sobre la Matriz (17/11) y para futuras publicaciones.
