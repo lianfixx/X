@@ -2,6 +2,14 @@
 
 Lo más reciente arriba. Formato en `ia/PROTOCOLO.md`, sección 3.
 
+## 2026-11-23 · Revisión semanal del algoritmo: commit 269340c de X
+- Agente: Claude Code (tarea programada en la nube)
+- Solicitud: tarea semanal de Emi «revisar si cambió el algoritmo de X y mantener al día la skill x-viral» (autorización permanente para abrir el pull request, no para fusionarlo).
+- Cambios: X publicó el commit `269340c` (21/11/2026). Los pesos de las acciones no cambiaron. Novedades verificadas en el código, con archivo y línea: (1) Grox tiene tres categorías nuevas: pedir que compartan (`SpamPromotesShares`, mismo castigo que el anzuelo, sin exención), pedir respuestas y pedir clics (dejan su propia etiqueta en el post); (2) cuatro experimentos apagados por defecto: anular en esos posts las señales pedidas, modo multiplicativo, factores separados por tipo de lector y diversidad contra lo ya visto; (3) índice aparte para videos que un modelo marca como generados por IA, sin castigo en el código; (4) «rastro de la línea de tiempo» en Under the Hood, apagado. Se reubicaron todas las citas de línea de `algoritmo.md`. Se actualizaron el resumen de SKILL.md (versión 1.2.0, `algoritmo_commit` 269340c), playbook.md y redaccion.md (no ordenar «compártelo», «coméntame» o «dale clic»). `xviral.py` vigila además tres archivos de X nuevos. Sin cambios en pilares, límites ni reglas.
+- Archivos: `skills/x-viral/references/algoritmo.md`, `skills/x-viral/SKILL.md`, `skills/x-viral/references/playbook.md`, `skills/x-viral/references/redaccion.md`, `skills/x-viral/scripts/xviral.py`, `skills/x-viral/data/pesos.json` y este registro.
+- Verificación: `xviral.py pesos comparar` → 58 cambios (parámetros e interruptores nuevos, 11 archivos citados); diff 660cd74…269340c leído; `xviral.py pesos extraer` → 35 pesos de home-mixer y 32 de vm-ranker, iguales a los anteriores; `python3 ia/verificar.py ci` → aprobado. El código de X no se ejecutó.
+- Pendiente: que Emi revise y fusione el pull request.
+
 ## 2026-11-19 · Hilo de la guía en el post del mapa
 - Agente: Claude Code (sesión en la nube)
 - Solicitud: Emi, 19/11/2026, en este chat: la guía y los hilos eran para el post ya publicado sobre la Matriz (17/11) y para futuras publicaciones.
