@@ -38,7 +38,9 @@ Lo que el texto debe cumplir:
 
 El anzuelo de interacción («RT y te mando…», «comenta X y te paso…», «like si…», «etiqueta a…») está entre las categorías de spam sin exención por tamaño de cuenta. No se usa nunca.
 
-Sí vale decir para quién es el post y dejar que el lector decida: «Si conoces a alguien que está por firmar un contrato de renta, esto le sirve». Sí vale invitar al mensaje directo cuando hay algo real que conversar. No se promete un regalo a cambio de una acción.
+Desde el 21/11/2026 Grox tiene tres categorías más: pedir que compartan (`SpamPromotesShares`, mismo castigo que el anzuelo), pedir respuestas (`SpamPromotesReplies`) y pedir clics (`SpamPromotesClicks`). Las dos últimas dejan su propia etiqueta en el post, y X ya escribió un experimento, apagado por ahora, que anularía en ese post las señales pedidas ([algoritmo.md](algoritmo.md)). Qué frase cae en cada una no está publicado. La regla práctica: no ordenar al lector «compártelo», «pásaselo», «coméntame» o «dale clic al enlace».
+
+Sí vale decir para quién es el post y dejar que el lector decida: «Si conoces a alguien que está por firmar un contrato de renta, esto le sirve» (sin añadir «mándaselo»). Sí vale invitar al mensaje directo cuando hay algo real que conversar. No se promete un regalo a cambio de una acción.
 
 ## Que no suene a IA
 
